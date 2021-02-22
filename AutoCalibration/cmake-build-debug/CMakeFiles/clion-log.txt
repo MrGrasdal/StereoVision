@@ -1,5 +1,4 @@
 /snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/martin/Code/Master/AutoCalibration
--- Found OpenCV: /usr/local (found suitable version "4.5.1", minimum required is "4") 
 -- Reading /usr/local/lib/cmake/GeographicLib/geographiclib-config.cmake
 -- GeographicLib configuration, version 1.51
 --   ${GeographicLib_LIBRARIES} set to shared library

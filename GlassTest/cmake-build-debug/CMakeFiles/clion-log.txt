@@ -1,18 +1,7 @@
 /snap/clion/139/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/martin/Code/Master/GlassTest
--- The C compiler identification is GNU 9.3.0
--- The CXX compiler identification is GNU 9.3.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc - works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ - works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
+-- Reading /usr/local/lib/cmake/GeographicLib/geographiclib-config.cmake
+-- GeographicLib configuration, version 1.51
+--   ${GeographicLib_LIBRARIES} set to shared library
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/martin/Code/Master/GlassTest/cmake-build-debug
