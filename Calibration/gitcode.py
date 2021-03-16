@@ -5,8 +5,9 @@ import sys
 
 import numpy as np
 import cv2
+from tqdm import tqdm
 
-CHESSBOARD_SIZE = (6, 6)
+CHESSBOARD_SIZE = (6, 4)
 CHESSBOARD_OPTIONS = (cv2.CALIB_CB_ADAPTIVE_THRESH + cv2.CALIB_CB_NORMALIZE_IMAGE
                       + cv2.CALIB_CB_FAST_CHECK)
 
@@ -24,8 +25,8 @@ MAX_IMAGES = 64
 #leftImageDir = 'imgs/mono_calib/left/'
 #rightImageDir = 'imgs/mono_calib/right/'
 
-leftImageDir = 'imgs/benchmark/left/'
-rightImageDir = 'imgs/benchmark/right/'
+leftImageDir = 'imgs/calibRun/left'
+rightImageDir = 'imgs/calibRun/right/'
 
 outputFile = 'file/outfile'
 
@@ -40,14 +41,14 @@ def readImagesAndFindChessboards(imageDirectory):
         print("Cache file at {0} not found".format(cacheFile))
 
     print("Reading images at {0}".format(imageDirectory))
-    imagePaths = glob.glob("{0}/*.jpg".format(imageDirectory))
+    imagePaths = glob.glob("{0}/*.bmp".format(imageDirectory))
 
     filenames = []
     objectPoints = []
     imagePoints = []
     imageSize = None
 
-    for imagePath in sorted(imagePaths):
+    for imagePath in tqdm(sorted(imagePaths)):
         image = cv2.imread(imagePath)
         grayImage = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -72,7 +73,7 @@ def readImagesAndFindChessboards(imageDirectory):
         cv2.imshow(imageDirectory, image)
 
         # Needed to draw the window
-        cv2.waitKey()
+        cv2.waitKey(1)
 
     cv2.destroyWindow(imageDirectory)
 
