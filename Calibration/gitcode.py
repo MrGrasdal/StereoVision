@@ -19,16 +19,23 @@ OPTIMIZE_ALPHA = 0.25
 TERMINATION_CRITERIA = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30,
         0.01)
 
-MAX_IMAGES = 64
+MAX_IMAGES = 200
 
 
 #leftImageDir = 'imgs/mono_calib/left/'
 #rightImageDir = 'imgs/mono_calib/right/'
 
-leftImageDir = 'imgs/calibRun/left'
-rightImageDir = 'imgs/calibRun/right/'
+leftImageDir = 'imgs/redCalibRun/left/'
+rightImageDir = 'imgs/redCalibRun/right/'
 
 outputFile = 'file/outfile'
+
+def reprojectionMatrix(reproVec):
+
+    return np.array([[reproVec[0,0], 0, reproVec[2,0]],
+            [0, reproVec[1,0], reproVec[3,0]],
+            [0, 0, 1]])
+
 
 def readImagesAndFindChessboards(imageDirectory):
     cacheFile = "{0}chessboards.npz".format(imageDirectory)
@@ -128,15 +135,18 @@ rightObjectPoints, rightImagePoints = getMatchingObjectAndImagePoints(filenames,
 objectPoints = leftObjectPoints
 
 print("Calibrating left camera...")
-_, leftCameraMatrix, leftDistortionCoefficients, _, _ = cv2.calibrateCamera(
+_, leftCameraMatrix, leftDistortionCoefficients, _, _, stdDevInt, stdDevExt, pVE= cv2.calibrateCameraExtended(
         objectPoints, leftImagePoints, imageSize, None, None)
 print("Left camera intrinsics: \n", leftCameraMatrix)
+print("Reprojection error: \n", reprojectionMatrix(stdDevInt))
 
 print("Calibrating right camera...")
-_, rightCameraMatrix, rightDistortionCoefficients, _, _ = cv2.calibrateCamera(
+_, rightCameraMatrix, rightDistortionCoefficients, _, _, stdDevInt, stdDevExt, pVE = cv2.calibrateCameraExtended(
         objectPoints, rightImagePoints, imageSize, None, None)
 
 print("Right camera intrinsics: \n", rightCameraMatrix)
+print("Reprojection error: \n", reprojectionMatrix(stdDevInt))
+
 
 print("Calibrating cameras together...")
 (_, _, _, _, _, rotationMatrix, translationVector, _, _) = cv2.stereoCalibrate(

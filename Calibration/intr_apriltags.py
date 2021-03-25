@@ -1,48 +1,64 @@
 import numpy as np
 import cv2
-import glob
+import os
 from tqdm import tqdm
 
-path = 'imgs/calibRun/right/*.bmp'
+from functions import *
+
+path = 'imgs/aprilCrazy2/right/'
 # termination criteria
 criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.01)
 
+atDet = Detector(families='tag16h5',
+                    nthreads=1,
+                    quad_decimate=5.0,
+                    quad_sigma=0.4,
+                    refine_edges=1,
+                    decode_sharpening=0.25,
+                    debug=0)
+
+#objPts = np.array([[750,145,0],[895,145,0],[895,0,0],[750,0,0],[0,145,0],[145,145,0],[145,0,0],[0,0,0]],dtype= np.float32)
+objPts = np.array([[0,750,0],[0,895,0],[145,895,0],[145,750,0],[0,0,0],[0,145,0],[145,145,0],[145,0,0]],dtype= np.float32)
+objPts[:,:2] = objPts[:,:2].T.reshape(-1,2)
+
+
 # prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
-objp = np.zeros((4*6,3), np.float32)
-objp[:,:2] = np.mgrid[0:600:100,0:400:100].T.reshape(-1,2)
+
 # Arrays to store object points and image points from all the images.
 objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
 
-images = glob.glob(path)
+images = sorted(os.listdir(path))
 teller = 0
 i = 0
 
 pbar = tqdm(total = len(images))
 
 while i < len(images):
-
     fname = images[i]
-    img = cv2.imread(fname)
+    img = cv2.imread(path+fname)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    ret, corners = cv2.findChessboardCorners(gray, (6,4), None)
+    imgOk, tags = detectDoubletags(gray, atDet)
     # If found, add object points, image points (after refining them)
-    if ret == True:
-        objpoints.append(objp)
-        corners2 = cv2.cornerSubPix(gray, corners, (11, 11), (-1, -1), criteria)
-        imgpoints.append(corners2)
+    if imgOk == True:
+        objpoints.append(objPts)
+        imgpoints.append(extractCorners(tags))
  
         # Draw and display the corners
-        img = cv2.drawChessboardCorners(img, (6,4), corners, ret)
+
+
         teller += 1
-        i += 20
-        pbar.update(20)
+        i += 5
+        pbar.update(5)
+        #showAprilImage(img, tags)
         #cv2.imshow('img',img)
         #cv2.waitKey(1)
 
     else:
         i += 1
         pbar.update(1)
+
+#imgpoints = np.vstack(imgpoints)
 
 pbar.close()
 
@@ -69,8 +85,8 @@ newObjPoints = []
 newImgPoints = []
 
 for i in range(len(imgpoints)):
-    if pVE[i,0] < 0.2:
-        newObjPoints.append(objp)
+    if pVE[i,0] < 100:
+        newObjPoints.append(objPts)
         newImgPoints.append(imgpoints[i])
 
 

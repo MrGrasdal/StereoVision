@@ -42,8 +42,8 @@ for i in range(temp):
 
 
 #print(image_points_l_2)
-R_init = np.eye(3)
-T_init = np.array([[-256.0,0.0,0.0]])/1000.0
+#R_init = np.eye(3)
+#T_init = np.array([[-256.0,0.0,0.0]])/1000.0
 
 retval, cameraMatrix1, distCoeffs1, cameraMatrix2, distCoeffs2, R, T, E, F = cv.stereoCalibrate(object_points,image_points_l_2,image_points_r_2,K_l,D_l,K_r,D_r,(1224,1024))
 

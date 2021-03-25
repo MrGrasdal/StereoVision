@@ -1,5 +1,6 @@
 import cv2 as cv
 from pupil_apriltags import Detector
+import numpy as np
 
 def detectDoubletags(img, atDet):
 
@@ -11,9 +12,9 @@ def detectDoubletags(img, atDet):
     id1 = False
 
     for tag in unfilteredTags:
-        print("\ttagid: {0} \tdecision_margin: {1}".format(tag.tag_id, tag.decision_margin))
+        #print("\ttagid: {0} \tdecision_margin: {1}".format(tag.tag_id, tag.decision_margin))
 
-        if tag.tag_id in range(0,2) and tag.decision_margin > 20:
+        if tag.tag_id in range(0,2) and tag.decision_margin > 40:
             filtTags.append(tag)
             if tag.tag_id == 0:
                 if id0:
@@ -70,3 +71,44 @@ def detectDoubletags(img, atDet):
 
     return ok, filtTags
 
+def showAprilImage(img, tags):
+
+    for tag in tags:
+        for idx in range(len(tag.corners)):
+            cv.line(
+                img,
+                tuple(tag.corners[idx - 1, :].astype(int)),
+                tuple(tag.corners[idx, :].astype(int)),
+                (0, 255, 0), 3,
+            )
+
+            cv.putText(
+                img,
+                str(idx + 1),
+                org=(
+                    int(tag.corners[idx, 0]),
+                    int(tag.corners[idx, 1])
+                ),
+                fontFace=cv.FONT_HERSHEY_SIMPLEX,
+                fontScale=0.5,
+                color=(0, 0, 255))
+
+        cv.putText(
+            img,
+            str(tag.tag_id),
+            org=(
+                tag.corners[0, 0].astype(int) + 10,
+                tag.corners[0, 1].astype(int) + 10,
+            ),
+            fontFace=cv.FONT_HERSHEY_SIMPLEX,
+            fontScale=0.8,
+            color=(0, 0, 255),)
+
+    cv.imshow("lol", img)
+    k = cv.waitKey()
+
+def extractCorners(tags):
+    corners = np.concatenate(((tags[0].corners).reshape(4,1,2), (tags[1].corners).reshape(4,1,2)), axis=0)
+
+
+    return np.float32(corners)
