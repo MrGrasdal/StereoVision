@@ -1,0 +1,7 @@
+[01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/src/capture.cpp:[m[K In member function ‘[01m[Kvoid acquisition::Capture::run_soft_trig()[m[K’:
+[01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/src/capture.cpp:1063:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kverify[m[K’ was not declared in this scope
+             verify if binning is set successfully
+[01;32m[K             ^[m[K
+make[2]: *** [CMakeFiles/acquilib.dir/src/capture.cpp.o] Error 1
+make[1]: *** [CMakeFiles/acquilib.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,1 @@
+/home/stereo/newspin_ws/devel/.private/cv_camera/lib/pkgconfig/cv_camera.pc

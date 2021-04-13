@@ -1,0 +1,8 @@
+prefix=/home/stereo/newspin_ws/devel/.private/image_publisher
+
+Name: image_publisher
+Description: Description of image_publisher
+Version: 1.15.3
+Cflags: -I/home/stereo/newspin_ws/devel/.private/image_publisher/include
+Libs: -L${prefix}/lib 
+Requires: 

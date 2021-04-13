@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/stereo/newspin_ws/devel/.private/spinnaker_sdk_camera_driver/setup.sh

@@ -1,0 +1,1 @@
+/home/stereo/newspin_ws/devel/.private/spinnaker_sdk_camera_driver/share/gennodejs/ros/spinnaker_sdk_camera_driver/msg/SpinnakerImageNames.js

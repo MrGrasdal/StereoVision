@@ -1,0 +1,7 @@
+  File "/home/stereo/newspin_ws/src/image_pipeline/stereo_image_proc/cfg/Disparity.cfg", line 23
+    gen.add("disparity_range",         int_t, 0, "Number of disparities to search, pixels", 64, 32, 4096)sadas
+                                                                                                             ^
+SyntaxError: invalid syntax
+make[2]: *** [/home/stereo/newspin_ws/devel/.private/stereo_image_proc/include/stereo_image_proc/DisparityConfig.h] Error 1
+make[1]: *** [CMakeFiles/stereo_image_proc_gencfg.dir/all] Error 2
+make: *** [all] Error 2

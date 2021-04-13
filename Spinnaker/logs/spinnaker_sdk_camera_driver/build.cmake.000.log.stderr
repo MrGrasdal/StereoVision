@@ -1,0 +1,19 @@
+[33m[1mCMake Warning[0m at /home/stereo/newspin_ws/src/spinnaker_camera_driver/CMakeLists.txt:24 (find_package):
+  By not providing "Findtrigger_msgs.cmake" in CMAKE_MODULE_PATH this project
+  has asked CMake to find a package configuration file provided by
+  "trigger_msgs", but CMake did not find one.
+
+  Could not find a package configuration file provided by "trigger_msgs" with
+  any of the following names:
+
+    trigger_msgsConfig.cmake
+    trigger_msgs-config.cmake
+
+  Add the installation prefix of "trigger_msgs" to CMAKE_PREFIX_PATH or set
+  "trigger_msgs_DIR" to a directory containing one of the above files.  If
+  "trigger_msgs" provides a separate development package or SDK, be sure it
+  has been installed.
+
+
+spinnaker lib :   /usr/lib/libSpinnaker.so
+uses LibUnwind for x86_64 or x86_32 architecture

@@ -1,0 +1,20 @@
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/include/spinnaker_sdk_camera_driver/std_include.h:13[m[K,
+                 from [01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/include/spinnaker_sdk_camera_driver/capture.h:4[m[K,
+                 from [01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/src/acquisition_node.cpp:1[m[K:
+[01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/src/acquisition_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/opt/ros/kinetic/include/ros/console.h:373:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+   do \
+[01;32m[K   ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:561:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/stereo/newspin_ws/src/spinnaker_camera_driver/src/acquisition_node.cpp:20:10:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+     ros::ROS_INFO("Wait for shutdown");
+[01;32m[K          ^[m[K
+make[2]: *** [CMakeFiles/acquisition_node.dir/src/acquisition_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/acquisition_node.dir/all] Error 2
+make: *** [all] Error 2
