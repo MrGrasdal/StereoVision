@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/home/stereo/newspin_ws/devel/.private/image_proc/lib;/opt/ros/kinetic/lib")

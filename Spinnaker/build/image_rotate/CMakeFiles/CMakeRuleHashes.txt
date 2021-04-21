@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+7cfd680bab31b5e59eea14e789ba9afc /home/stereo/newspin_ws/devel/.private/image_rotate/include/image_rotate/ImageRotateConfig.h
+5fe3b77cdfb02c595caefbc38bd03234 CMakeFiles/clean_test_results
+dbbcc987617614913ac06f9d2c94bc09 CMakeFiles/image_rotate_gencfg

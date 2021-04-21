@@ -1,0 +1,1 @@
+/home/stereo/newspin_ws/devel/.private/spinnaker_sdk_camera_driver/share/common-lisp/ros/spinnaker_sdk_camera_driver/msg/spinnaker_sdk_camera_driver-msg.asd

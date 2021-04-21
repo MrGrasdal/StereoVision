@@ -1,0 +1,1 @@
+/home/stereo/newspin_ws/devel/.private/spinnaker_sdk_camera_driver/share/spinnaker_sdk_camera_driver/cmake/spinnaker_sdk_camera_driver-msg-paths.cmake

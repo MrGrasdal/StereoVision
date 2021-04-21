@@ -1,0 +1,8 @@
+cv_camera
+/home/stereo/newspin_ws/devel/.private/cv_camera/cmake.lock /home/stereo/newspin_ws/devel/./cmake.lock
+/home/stereo/newspin_ws/devel/.private/cv_camera/share/cv_camera/cmake/cv_cameraConfig.cmake /home/stereo/newspin_ws/devel/share/cv_camera/cmake/cv_cameraConfig.cmake
+/home/stereo/newspin_ws/devel/.private/cv_camera/share/cv_camera/cmake/cv_cameraConfig-version.cmake /home/stereo/newspin_ws/devel/share/cv_camera/cmake/cv_cameraConfig-version.cmake
+/home/stereo/newspin_ws/devel/.private/cv_camera/lib/libcv_camera.so /home/stereo/newspin_ws/devel/lib/libcv_camera.so
+/home/stereo/newspin_ws/devel/.private/cv_camera/lib/libcv_camera_nodelet.so /home/stereo/newspin_ws/devel/lib/libcv_camera_nodelet.so
+/home/stereo/newspin_ws/devel/.private/cv_camera/lib/pkgconfig/cv_camera.pc /home/stereo/newspin_ws/devel/lib/pkgconfig/cv_camera.pc
+/home/stereo/newspin_ws/devel/.private/cv_camera/lib/cv_camera/cv_camera_node /home/stereo/newspin_ws/devel/lib/cv_camera/cv_camera_node
