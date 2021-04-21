@@ -1,0 +1,8 @@
+prefix=/home/martin/Code/Master/autoCalib_ws/devel
+
+Name: calibration
+Description: Description of calibration
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge image_transport message_filters

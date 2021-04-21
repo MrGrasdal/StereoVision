@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "AutoCalibration"
   "AutoCalibration.pdb"
+  "CMakeFiles/AutoCalibration.dir/autoCalibration.cpp.o"
   "CMakeFiles/AutoCalibration.dir/main.cpp.o"
 )
 

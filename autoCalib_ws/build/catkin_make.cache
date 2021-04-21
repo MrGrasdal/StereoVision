@@ -1,0 +1,2 @@
+calibration:speak_listen
+-DCATKIN_DEVEL_PREFIX=/home/martin/Code/Master/autoCalib_ws/devel -DCMAKE_INSTALL_PREFIX=/home/martin/Code/Master/autoCalib_ws/install -G Unix Makefiles

@@ -16,7 +16,10 @@ find_package(Eigen3 REQUIRED)
 find_package(Sophus REQUIRED)
 find_package(GeographicLib REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp)
+find_package(catkin REQUIRED COMPONENTS
+        rosbag   rosconsole roscpp   roslib   sensor_msgs  std_msgs )
+
+add_executable(${PROJECT_NAME} main.cpp autoCalibration.cpp autoCalibration.h )
 
 target_link_libraries(${PROJECT_NAME}
         ${OpenCV_LIBS}

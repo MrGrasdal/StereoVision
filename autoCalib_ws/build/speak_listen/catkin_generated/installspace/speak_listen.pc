@@ -1,0 +1,8 @@
+prefix=/home/martin/Code/Master/autoCalib_ws/install
+
+Name: speak_listen
+Description: Description of speak_listen
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
