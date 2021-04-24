@@ -8,11 +8,18 @@ project(speak_listen)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  rospy
-  std_msgs
-  message_generation
+        roscpp
+        rospy
+        cv_bridge
+        cv_bridge
+        image_transport
+        sensor_msgs
+        message_filters
+        std_msgs
+        message_generation
 )
+
+find_package(OpenCV 4 REQUIRED)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

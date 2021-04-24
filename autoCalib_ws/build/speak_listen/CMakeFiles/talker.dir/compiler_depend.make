@@ -3,6 +3,18 @@
 
 speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/autoCalib_ws/src/speak_listen/src/talker.cpp \
   /usr/include/stdc-predef.h \
+  /usr/include/string.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/features.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/strings.h \
   /opt/ros/noetic/include/ros/ros.h \
   /opt/ros/noetic/include/ros/time.h \
   /opt/ros/noetic/include/ros/platform.h \
@@ -10,22 +22,12 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
   /usr/include/c++/9/cstdlib \
   /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
-  /usr/include/features.h \
-  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
-  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/long-double.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
-  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
   /usr/include/stdlib.h \
-  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
-  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
-  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/include/x86_64-linux-gnu/bits/types.h \
   /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -268,8 +270,6 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
   /usr/include/c++/9/sstream \
   /usr/include/c++/9/bits/sstream.tcc \
   /usr/include/c++/9/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/boost/config/no_tr1/complex.hpp \
   /usr/include/c++/9/complex \
   /usr/include/boost/math/policies/policy.hpp \
@@ -1224,8 +1224,49 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
   /opt/ros/noetic/include/ros/topic.h \
   /opt/ros/noetic/include/ros/node_handle.h \
   /opt/ros/noetic/include/std_msgs/String.h \
-  /opt/ros/noetic/include/ros/message_operations.h
+  /opt/ros/noetic/include/ros/message_operations.h \
+  /opt/ros/noetic/include/image_transport/image_transport.h \
+  /opt/ros/noetic/include/image_transport/publisher.h \
+  /opt/ros/noetic/include/sensor_msgs/Image.h \
+  /opt/ros/noetic/include/std_msgs/Header.h \
+  /opt/ros/noetic/include/image_transport/single_subscriber_publisher.h \
+  /opt/ros/noetic/include/image_transport/exports.h \
+  /opt/ros/noetic/include/image_transport/exception.h \
+  /opt/ros/noetic/include/image_transport/loader_fwds.h \
+  /opt/ros/noetic/include/image_transport/subscriber.h \
+  /opt/ros/noetic/include/image_transport/transport_hints.h \
+  /opt/ros/noetic/include/image_transport/camera_publisher.h \
+  /opt/ros/noetic/include/sensor_msgs/CameraInfo.h \
+  /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h \
+  /opt/ros/noetic/include/image_transport/camera_subscriber.h \
+  /usr/include/dirent.h \
+  /usr/include/x86_64-linux-gnu/bits/dirent.h \
+  /usr/include/x86_64-linux-gnu/bits/dirent_ext.h
 
+
+/usr/include/dirent.h:
+
+/opt/ros/noetic/include/image_transport/camera_subscriber.h:
+
+/opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h:
+
+/opt/ros/noetic/include/sensor_msgs/CameraInfo.h:
+
+/opt/ros/noetic/include/image_transport/camera_publisher.h:
+
+/opt/ros/noetic/include/image_transport/subscriber.h:
+
+/opt/ros/noetic/include/image_transport/loader_fwds.h:
+
+/opt/ros/noetic/include/image_transport/exception.h:
+
+/opt/ros/noetic/include/image_transport/single_subscriber_publisher.h:
+
+/opt/ros/noetic/include/std_msgs/Header.h:
+
+/opt/ros/noetic/include/sensor_msgs/Image.h:
+
+/opt/ros/noetic/include/image_transport/publisher.h:
 
 /opt/ros/noetic/include/std_msgs/String.h:
 
@@ -1791,12 +1832,6 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/function/function_base.hpp:
 
-/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
-
-/usr/include/strings.h:
-
-/usr/include/string.h:
-
 /usr/include/c++/9/bits/sstream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -1811,25 +1846,29 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/mpl/list.hpp:
 
+/usr/include/string.h:
+
 /usr/include/c++/9/bits/uses_allocator.h:
 
 /usr/include/c++/9/bits/unique_ptr.h:
 
-/usr/include/boost/mpl/clear_fwd.hpp:
+/usr/include/c++/9/bits/locale_facets_nonio.tcc:
 
-/usr/include/boost/move/detail/meta_utils.hpp:
+/usr/include/boost/mpl/equal_to.hpp:
 
-/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
+/usr/include/boost/date_time/gregorian/greg_year.hpp:
 
-/usr/include/boost/config/no_tr1/complex.hpp:
+/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
-/usr/include/c++/9/ext/type_traits.h:
+/usr/include/boost/predef/platform/windows_runtime.h:
 
-/usr/include/boost/predef/os/qnxnto.h:
+/usr/include/boost/ratio/detail/mpl/sign.hpp:
 
-/usr/include/c++/9/bits/postypes.h:
+/usr/include/boost/predef/hardware/simd/arm.h:
 
-/usr/include/boost/type_traits/is_bounded_array.hpp:
+/usr/include/c++/9/bits/codecvt.h:
+
+/usr/include/boost/config/auto_link.hpp:
 
 /usr/include/time.h:
 
@@ -1862,6 +1901,10 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+
+/usr/include/strings.h:
 
 /usr/include/c++/9/type_traits:
 
@@ -1899,7 +1942,11 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/c++/9/bits/allocator.h:
 
-/usr/include/c++/9/bits/locale_facets_nonio.tcc:
+/usr/include/boost/mpl/clear_fwd.hpp:
+
+/usr/include/boost/move/detail/meta_utils.hpp:
+
+/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
 
 /usr/include/c++/9/ext/atomicity.h:
 
@@ -1962,6 +2009,16 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/boost/type_traits/is_array.hpp:
+
+/usr/include/boost/config/no_tr1/complex.hpp:
+
+/usr/include/c++/9/ext/type_traits.h:
+
+/usr/include/boost/predef/os/qnxnto.h:
+
+/usr/include/c++/9/bits/postypes.h:
+
+/usr/include/boost/type_traits/is_bounded_array.hpp:
 
 /usr/include/boost/mpl/quote.hpp:
 
@@ -2029,10 +2086,6 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/c++/9/bits/move.h:
 
-/usr/include/boost/mpl/equal_to.hpp:
-
-/usr/include/boost/date_time/gregorian/greg_year.hpp:
-
 /usr/include/boost/mpl/list/aux_/clear.hpp:
 
 /usr/include/boost/config/user.hpp:
@@ -2063,11 +2116,37 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /opt/ros/noetic/include/ros/message_traits.h:
 
-/usr/include/c++/9/memory:
+/usr/include/boost/mpl/int.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+/usr/include/c++/9/bits/cxxabi_init_exception.h:
 
-/usr/include/boost/mpl/list/aux_/include_preprocessed.hpp:
+/opt/ros/noetic/include/ros/ros.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/include/boost/predef/architecture/sys390.h:
+
+/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+
+/usr/include/boost/type_traits/is_destructible.hpp:
+
+/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
+
+/usr/include/boost/mpl/aux_/config/dtp.hpp:
+
+/usr/include/c++/9/bits/exception_ptr.h:
+
+/usr/include/c++/9/cstdint:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/include/boost/mpl/aux_/full_lambda.hpp:
+
+/opt/ros/noetic/include/ros/platform.h:
+
+/usr/include/c++/9/bits/ostream.tcc:
 
 /usr/include/boost/type_traits/is_arithmetic.hpp:
 
@@ -2093,6 +2172,12 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/c++/9/cmath:
 
+/usr/include/boost/mpl/list/aux_/include_preprocessed.hpp:
+
+/usr/include/c++/9/memory:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
 /usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
 
 /usr/include/boost/date_time/posix_time/time_period.hpp:
@@ -2117,31 +2202,115 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/smart_ptr/detail/spinlock.hpp:
 
-/usr/include/boost/mpl/int.hpp:
+/usr/include/c++/9/cstdlib:
 
-/usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+/usr/include/boost/predef/detail/_exception.h:
 
-/usr/include/boost/mpl/aux_/full_lambda.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
-/opt/ros/noetic/include/ros/platform.h:
+/opt/ros/noetic/include/ros/types.h:
 
-/usr/include/c++/9/bits/ostream.tcc:
+/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+/usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
 
-/usr/include/boost/type_traits/is_destructible.hpp:
+/usr/include/boost/smart_ptr/weak_ptr.hpp:
 
-/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
+/usr/include/boost/detail/basic_pointerbuf.hpp:
 
-/usr/include/boost/mpl/aux_/config/dtp.hpp:
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
-/usr/include/c++/9/bits/exception_ptr.h:
+/usr/include/c++/9/bits/range_access.h:
 
-/usr/include/c++/9/cstdint:
+/usr/include/x86_64-linux-gnu/sys/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/usr/include/boost/mpl/contains.hpp:
 
-/usr/include/c++/9/bits/cxxabi_init_exception.h:
+/usr/include/boost/predef/os/bsd/open.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/c++/9/debug/assertions.h:
+
+/usr/include/boost/mpl/protect.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/c++/9/bits/locale_facets.tcc:
+
+/usr/include/c++/9/bits/nested_exception.h:
+
+/usr/include/boost/preprocessor/logical/compl.hpp:
+
+/usr/include/boost/ratio/detail/mpl/gcd.hpp:
+
+/usr/include/boost/mpl/front_inserter.hpp:
+
+/usr/include/boost/mpl/aux_/lambda_support.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/boost/predef/other.h:
+
+/usr/include/c++/9/bits/algorithmfwd.h:
+
+/usr/include/boost/noncopyable.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
+
+/usr/include/boost/config.hpp:
+
+/usr/include/boost/predef/compiler/intel.h:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/endian.h:
+
+/usr/include/boost/type_traits/is_default_constructible.hpp:
+
+/usr/include/boost/mpl/aux_/lambda_spec.hpp:
+
+/usr/include/boost/thread/detail/platform.hpp:
+
+/usr/include/boost/cstdint.hpp:
+
+/usr/include/boost/function/function_fwd.hpp:
+
+/usr/include/boost/array.hpp:
+
+/usr/include/boost/mpl/at_fwd.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/boost/preprocessor/array/size.hpp:
+
+/usr/include/boost/mpl/aux_/config/gcc.hpp:
+
+/opt/ros/noetic/include/ros/duration.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
+
+/usr/include/boost/mpl/multiplies.hpp:
+
+/usr/include/c++/9/bits/locale_facets.h:
+
+/usr/include/c++/9/initializer_list:
+
+/usr/include/boost/math/policies/error_handling.hpp:
+
+/usr/include/boost/math/special_functions/detail/fp_traits.hpp:
+
+/usr/include/boost/preprocessor/control/expr_iif.hpp:
+
+/opt/ros/noetic/include/ros/serialized_message.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
+
+/usr/include/c++/9/streambuf:
+
+/usr/include/boost/core/no_exceptions_support.hpp:
+
+/usr/include/boost/date_time/gregorian/greg_ymd.hpp:
 
 /usr/include/boost/mpl/O1_size_fwd.hpp:
 
@@ -2183,16 +2352,6 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/preprocessor/control/iif.hpp:
 
-/opt/ros/noetic/include/ros/ros.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/include/boost/predef/architecture/sys390.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
-
-/usr/include/c++/9/bits/uniform_int_dist.h:
-
 /usr/include/boost/math/special_functions/detail/round_fwd.hpp:
 
 /usr/include/boost/mpl/aux_/find_if_pred.hpp:
@@ -2201,139 +2360,21 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/usr/include/c++/9/bits/uniform_int_dist.h:
+
 /usr/include/boost/mpl/aux_/push_front_impl.hpp:
 
 /usr/include/boost/bind/mem_fn_cc.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/endian.h:
-
-/usr/include/boost/type_traits/is_default_constructible.hpp:
-
-/usr/include/boost/mpl/aux_/lambda_spec.hpp:
-
-/usr/include/boost/thread/detail/platform.hpp:
-
-/usr/include/boost/cstdint.hpp:
-
-/usr/include/boost/preprocessor/logical/compl.hpp:
-
-/usr/include/boost/ratio/detail/mpl/gcd.hpp:
-
-/usr/include/boost/mpl/front_inserter.hpp:
-
-/usr/include/boost/mpl/aux_/lambda_support.hpp:
-
-/usr/include/boost/array.hpp:
-
-/usr/include/boost/function/function_fwd.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/boost/predef/other.h:
-
-/usr/include/c++/9/bits/algorithmfwd.h:
-
-/usr/include/boost/noncopyable.hpp:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/times.hpp:
-
-/usr/include/boost/config.hpp:
-
-/usr/include/boost/predef/compiler/intel.h:
-
-/usr/include/c++/9/cstdlib:
-
-/usr/include/boost/predef/detail/_exception.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/opt/ros/noetic/include/ros/types.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-
-/usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
-
-/usr/include/boost/smart_ptr/weak_ptr.hpp:
-
-/usr/include/boost/detail/basic_pointerbuf.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/c++/9/debug/assertions.h:
-
-/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
-
-/usr/include/boost/predef/platform/windows_runtime.h:
-
-/usr/include/boost/ratio/detail/mpl/sign.hpp:
-
-/usr/include/boost/predef/hardware/simd/arm.h:
-
-/usr/include/c++/9/bits/codecvt.h:
-
-/usr/include/boost/config/auto_link.hpp:
-
-/usr/include/boost/mpl/protect.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
-/usr/include/c++/9/bits/locale_facets.tcc:
-
-/usr/include/c++/9/bits/range_access.h:
-
-/usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/include/boost/mpl/contains.hpp:
-
-/usr/include/boost/predef/os/bsd/open.h:
-
 /usr/include/boost/preprocessor/list/fold_left.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/c++/9/iosfwd:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
-/usr/include/c++/9/bits/nested_exception.h:
+/usr/include/c++/9/iosfwd:
 
-/usr/include/boost/mpl/at_fwd.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/boost/preprocessor/array/size.hpp:
-
-/usr/include/boost/mpl/aux_/config/gcc.hpp:
-
-/opt/ros/noetic/include/ros/duration.h:
-
-/usr/include/boost/mpl/aux_/preprocessed/gcc/advance_forward.hpp:
-
-/usr/include/boost/mpl/multiplies.hpp:
-
-/usr/include/c++/9/bits/locale_facets.h:
-
-/usr/include/c++/9/initializer_list:
-
-/usr/include/boost/math/policies/error_handling.hpp:
-
-/usr/include/boost/math/special_functions/detail/fp_traits.hpp:
-
-/usr/include/boost/preprocessor/control/expr_iif.hpp:
-
-/opt/ros/noetic/include/ros/serialized_message.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h:
-
-/usr/include/c++/9/streambuf:
-
-/usr/include/boost/core/no_exceptions_support.hpp:
-
-/usr/include/boost/date_time/gregorian/greg_ymd.hpp:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/9/bits/locale_conv.h:
 
@@ -2345,9 +2386,9 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_common.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-
 /usr/include/boost/predef/compiler/ekopath.h:
+
+/usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/boost/mpl/vector/aux_/O1_size.hpp:
 
@@ -2493,6 +2534,8 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/mpl/vector/aux_/at.hpp:
 
+/opt/ros/noetic/include/image_transport/exports.h:
+
 /usr/include/boost/predef/hardware/simd/ppc/versions.h:
 
 /usr/include/c++/9/cstdio:
@@ -2582,6 +2625,8 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 /usr/include/boost/mpl/aux_/preprocessed/gcc/greater.hpp:
 
 /usr/include/boost/mpl/aux_/na_assert.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/dirent.h:
 
 /usr/include/c++/9/bits/streambuf.tcc:
 
@@ -3113,6 +3158,8 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/numeric/conversion/converter_policies.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/dirent_ext.h:
+
 /usr/include/boost/config/no_tr1/functional.hpp:
 
 /usr/include/boost/integer_traits.hpp:
@@ -3427,6 +3474,8 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 
 /usr/include/boost/predef/architecture/arm.h:
 
+/opt/ros/noetic/include/image_transport/transport_hints.h:
+
 /usr/include/boost/predef/architecture/ia64.h:
 
 /usr/include/boost/cerrno.hpp:
@@ -3606,6 +3655,8 @@ speak_listen/CMakeFiles/talker.dir/src/talker.cpp.o: /home/martin/Code/Master/au
 /usr/include/boost/thread/pthread/pthread_helpers.hpp:
 
 /opt/ros/noetic/include/ros/subscription_callback_helper.h:
+
+/opt/ros/noetic/include/image_transport/image_transport.h:
 
 /opt/ros/noetic/include/ros/single_subscriber_publisher.h:
 

@@ -1,26 +1,38 @@
 //
 // Created by martin on 20.04.2021.
 //
+
+#include <opencv2/highgui/highgui.hpp>
+#include <cv_bridge/cv_bridge.h>
+#include <string.h>
 #include "ros/ros.h"
 #include "std_msgs/String.h"
-
+#include <image_transport/image_transport.h>
+#include <sys/types.h>
+#include <dirent.h>
+#include <vector>
 #include <sstream>
 
-/**
- * This tutorial demonstrates simple sending of messages over the ROS system.
- */
+using namespace std;
+using namespace cv;
+
+
+void read_directory(const std::string& name, vector<string>& v)
+{
+    DIR* dirp = opendir(name.c_str());
+    struct dirent * dp;
+    while ((dp = readdir(dirp)) != NULL) {
+        v.push_back(dp->d_name);
+    }
+
+    v.erase(v.begin(), v.begin()+2);
+
+    closedir(dirp);
+}
+
+
 int main(int argc, char **argv)
 {
-    /**
-     * The ros::init() function needs to see argc and argv so that it can perform
-     * any ROS arguments and name remapping that were provided at the command line.
-     * For programmatic remappings you can use a different version of init() which takes
-     * remappings directly, but for most command-line programs, passing argc and argv is
-     * the easiest way to do it.  The third argument to init() is the name of the node.
-     *
-     * You must call one of the versions of ros::init() before using any other
-     * part of the ROS system.
-     */
     ros::init(argc, argv, "talker");
 
     /**
@@ -29,6 +41,7 @@ int main(int argc, char **argv)
      * NodeHandle destructed will close down the node.
      */
     ros::NodeHandle n;
+    image_transport::ImageTransport it(n);
 
     /**
      * The advertise() function is how you tell ROS that you want to
@@ -47,27 +60,34 @@ int main(int argc, char **argv)
      * than we can send them, the number here specifies how many messages to
      * buffer up before throwing some away.
      */
-    ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+    image_transport::Publisher pubLeft = it.advertise("/camera_array/left/image_raw", 1000);
+    image_transport::Publisher pubRight = it.advertise("/camera_array/right/image_raw", 1000);
 
-    ros::Rate loop_rate(10);
+    ros::Rate loop_rate(1);
+
+    std::string path = "/media/martin/Samsung_T5/imgs/calibDay2/";
+
+    vector<string> filenames;
+
+    read_directory(path+"left", filenames);
 
     /**
      * A count of how many messages we have sent. This is used to create
      * a unique string for each message.
      */
-    int count = 0;
-    while (ros::ok())
+
+    for (auto & fname : filenames)
     {
         /**
          * This is a message object. You stuff it with data, and then publish it.
          */
-        std_msgs::String msg;
 
-        std::stringstream ss;
-        ss << "hello world " << count;
-        msg.data = ss.str();
+        Mat imgL = imread(path+"left/"+fname);
+        Mat imgR = imread(path+"right/"+fname);
 
-        ROS_INFO("%s", msg.data.c_str());
+        sensor_msgs::ImagePtr msgL = cv_bridge::CvImage(std_msgs::Header(), "bgr8", imgL).toImageMsg();
+        sensor_msgs::ImagePtr msgR = cv_bridge::CvImage(std_msgs::Header(), "bgr8", imgR).toImageMsg();
+
 
         /**
          * The publish() function is how you send messages. The parameter
@@ -75,12 +95,14 @@ int main(int argc, char **argv)
          * given as a template parameter to the advertise<>() call, as was done
          * in the constructor above.
          */
-        chatter_pub.publish(msg);
 
+
+        pubLeft.publish(msgL);
+        pubRight.publish(msgR);
         ros::spinOnce();
 
         loop_rate.sleep();
-        ++count;
+
     }
 
 

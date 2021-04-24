@@ -1,4 +1,4 @@
-/snap/clion/149/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/martin/Code/Master/AutoCalibration
+/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/martin/Code/Master/AutoCalibration
 -- Reading /usr/local/lib/cmake/GeographicLib/geographiclib-config.cmake
 -- GeographicLib configuration, version 1.51
 --   ${GeographicLib_LIBRARIES} set to shared library

@@ -74,7 +74,7 @@ if("TRUE" STREQUAL "TRUE")
 else()
   set(calibration_SOURCE_PREFIX "")
   set(calibration_DEVEL_PREFIX "")
-  set(calibration_INSTALL_PREFIX /home/martin/Code/Master/autoCalib_ws/install)
+  set(calibration_INSTALL_PREFIX /usr/local)
   set(calibration_PREFIX ${calibration_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(calibration_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/martin/Code/Master/autoCalib_ws/devel/include " STREQUAL " ")
   set(calibration_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/martin/Code/Master/autoCalib_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/martin/Code/Master/autoCalib_ws/devel/lib;/home/martin/Code/Master/autoCalib_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/martin/Code/Master/autoCalib_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(calibration_EXPORTED_TARGETS "")
+set(calibration_EXPORTED_TARGETS "calibration_generate_messages_cpp;calibration_generate_messages_eus;calibration_generate_messages_lisp;calibration_generate_messages_nodejs;calibration_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${calibration_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${calibration_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "cv_bridge;image_transport;message_filters")
+set(depends "message_runtime;cv_bridge;image_transport;message_filters")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   list(APPEND calibration_EXPORTED_TARGETS ${${calibration_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "calibration-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${calibration_DIR}/${extra})

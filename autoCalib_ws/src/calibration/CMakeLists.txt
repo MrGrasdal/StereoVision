@@ -12,6 +12,8 @@ find_package(catkin REQUIRED COMPONENTS
         image_transport
         sensor_msgs
         message_filters
+        std_msgs
+        message_generation
         )
 
 find_package(OpenCV 4 REQUIRED)
@@ -50,7 +52,12 @@ find_package(OpenCV 4 REQUIRED)
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES ...)
 
 ## Generate messages in the 'msg' folder
-# add_message_files(
+add_message_files(
+        FILES
+        gnssGGA_status.msg
+        gnssGGA.msg
+
+)
 #   FILES
 #   Message1.msg
 #   Message2.msg
@@ -71,10 +78,10 @@ find_package(OpenCV 4 REQUIRED)
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs  # Or other packages containing msgs
-# )
+generate_messages(
+        DEPENDENCIES
+        std_msgs  # Or other packages containing msgs
+)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -108,7 +115,7 @@ find_package(OpenCV 4 REQUIRED)
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES calibration
-        CATKIN_DEPENDS
+        CATKIN_DEPENDS message_runtime
         cv_bridge
         image_transport
         message_filters
@@ -214,3 +221,4 @@ include_directories(
 
 add_executable(main_calib src/main_calib.cpp)
 target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_dependencies(main_calib calibration_generate_messages_cpp)
