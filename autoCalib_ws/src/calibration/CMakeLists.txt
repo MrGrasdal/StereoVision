@@ -129,7 +129,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+        include
         ${catkin_INCLUDE_DIRS}
         ${OpenCV_INCLUDE_DIRS}
 )
@@ -219,6 +219,9 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(main_calib src/main_calib.cpp)
+
+add_executable(main_calib src/main_calib.cpp src/feat_utils.cpp)
 target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 add_dependencies(main_calib calibration_generate_messages_cpp)
+
+

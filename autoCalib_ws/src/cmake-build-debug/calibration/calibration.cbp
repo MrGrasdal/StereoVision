@@ -48,6 +48,7 @@
 					<Add option="-DROS_PACKAGE_NAME=&quot;calibration&quot;"/>
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/martin/Code/Master/autoCalib_ws/devel/include"/>
+					<Add directory="/home/martin/Code/Master/autoCalib_ws/src/calibration/include"/>
 					<Add directory="/opt/ros/noetic/include"/>
 					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
 					<Add directory="/usr/include/opencv4"/>
@@ -78,6 +79,7 @@
 					<Add option="-DROS_PACKAGE_NAME=&quot;calibration&quot;"/>
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/martin/Code/Master/autoCalib_ws/devel/include"/>
+					<Add directory="/home/martin/Code/Master/autoCalib_ws/src/calibration/include"/>
 					<Add directory="/opt/ros/noetic/include"/>
 					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
 					<Add directory="/usr/include/opencv4"/>
@@ -208,6 +210,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/calibration/src/feat_utils.cpp">
+			<Option target="main_calib"/>
+		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/calibration/src/main_calib.cpp">
 			<Option target="main_calib"/>
 		</Unit>

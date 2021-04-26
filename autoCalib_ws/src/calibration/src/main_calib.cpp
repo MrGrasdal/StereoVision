@@ -4,76 +4,73 @@
 
 //#include <ros/ros.h>
 //#include <image_transport/image_transport.h>
-
-#include <string.h>
-#include <opencv2/highgui/highgui.hpp>
-#include <cv_bridge/cv_bridge.h>
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
+#include <message_filters/sync_policies/approximate_time.h>
+
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
 #include <calibration//gnssGGA.h>
+
+#include <opencv2/highgui/highgui.hpp>
+#include <cv_bridge/cv_bridge.h>
+
+#include <string.h>
 #include <iostream>
+
+#include "../include/feat_utils.h"
 
 using namespace sensor_msgs;
 using namespace message_filters;
 using namespace cv_bridge;
 using namespace std;
+using namespace cv;
 
 
-int i;
-const string savePath = "/media/martin/Samsung_T5/imgs/calibRun/";
-bool save = false;
+FeatureUtils _feat;
 
 
-void imageCallback(const sensor_msgs::ImageConstPtr &imgL,
-                   const sensor_msgs::ImageConstPtr &imgR,
-                   const calibration::gnssGGA::ConstPtr &gnss) {
-    try {
-        i++;
-        if (i % 10 == 0)
-        {
-            cv::Mat cv_imgR = cv_bridge::toCvCopy(imgR, image_encodings::BGR8)->image;
-            cv::Mat cv_imgL = cv_bridge::toCvCopy(imgL, image_encodings::BGR8)->image;
+void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
+                   const sensor_msgs::ImageConstPtr &imgR_msg,
+                   const calibration::gnssGGA::ConstPtr &gnss_msg) {
 
-            cv::Mat cv_img;
-            cv::hconcat(cv_imgL, cv_imgR, cv_img);
+    double gnss_t = double(gnss_msg->header.stamp.sec) + double(gnss_msg->header.stamp.nsec)*1e-9;
+    double imgL_t = double(imgL_msg->header.stamp.sec) + double(imgL_msg->header.stamp.nsec)*1e-9;
 
-            std_msgs::Header h = imgL->header;
-            double h_time = double(h.stamp.sec) + double(h.stamp.nsec)*1e-9;
+    cv::Mat imgL = cv_bridge::toCvCopy(imgL_msg, image_encodings::BGR8)->image;
+    cv::Mat imgR = cv_bridge::toCvCopy(imgR_msg, image_encodings::BGR8)->image;
 
-            to_string(h_time);
-            if (save) {
-                //ROS_INFO("TS: '%f'", h_time);
-                imwrite(savePath + "left/" + to_string(h_time) + ".bmp", cv_imgL);
-                imwrite(savePath + "right/" + to_string(h_time) + ".bmp", cv_imgR);
-            }
+    //_feat.saveStereoImage(imgL, imgR, imgL_t);
+    //_feat.printStereoImage(imgL, imgR);
 
-            namedWindow("Left \t\t\t\t\t\t\t\t\t Right", cv::WINDOW_FULLSCREEN);
-            cv::imshow("Left \t\t\t\t\t\t\t\t\t Right", cv_img);
-            //cv::waitKey(1);
-        }
-    }
-    catch (cv_bridge::Exception &e) {
-        ROS_ERROR("Could not convert from '%s' to 'bgr8'.", imgL->encoding.c_str());
-    }
+    vector<Point2f> kptsL, kptsR;
+    vector<DMatch> matches;
+
+    _feat.extractKpts(imgL, imgR, kptsL, kptsR, matches, "SURF", true);
+
+    int i = 0;
+
+
+
 }
 
 
 int main(int argc, char **argv) {
-    i = 0;
 
-    ros::init(argc, argv, "image_listener");
+    ROS_INFO("Starting node");
+
+    ros::init(argc, argv, "autoCalibration");
     ros::NodeHandle nh;
 
-    cv::namedWindow("Left \t\t\t\t\t\t\t\t\t Right");
+    message_filters::Subscriber<Image> imgL_sub(nh, "/camera_array/left/image_raw", 1);
+    message_filters::Subscriber<Image> imgR_sub(nh, "/camera_array/right/image_raw", 1);
+    message_filters::Subscriber<calibration::gnssGGA> gnss_sub(nh, "/vectorVS330/fix", 1);
 
-    message_filters::Subscriber <Image> imgL_sub(nh, "/camera_array/left/image_raw", 1);
-    message_filters::Subscriber <Image> imgR_sub(nh, "/camera_array/right/image_raw", 1);
-    message_filters::Subscriber <calibration::gnssGGA> gnss_sub(nh, "custom_msgs/gnssGGA", 1);
-    TimeSynchronizer <Image, Image, calibration::gnssGGA> sync(imgL_sub, imgR_sub, gnss_sub, 10);
+    typedef sync_policies::ApproximateTime<Image, Image, calibration::gnssGGA> MySyncPolicy;
+    //typedef sync_policies::ApproximateTime<Image, Image> MySyncPolicy;
+
+    Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), imgL_sub, imgR_sub, gnss_sub);
     sync.registerCallback(boost::bind(&imageCallback, _1, _2, _3));
 
     ros::spin();
-    cv::destroyWindow("Left \t\t\t\t\t\t\t\t\t Right");
 }

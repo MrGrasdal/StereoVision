@@ -396,6 +396,33 @@ calibration_generate_messages_nodejs/fast:
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/build.make calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/build
 .PHONY : calibration_generate_messages_nodejs/fast
 
+src/feat_utils.o: src/feat_utils.cpp.o
+
+.PHONY : src/feat_utils.o
+
+# target to build an object file
+src/feat_utils.cpp.o:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o
+.PHONY : src/feat_utils.cpp.o
+
+src/feat_utils.i: src/feat_utils.cpp.i
+
+.PHONY : src/feat_utils.i
+
+# target to preprocess a source file
+src/feat_utils.cpp.i:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.i
+.PHONY : src/feat_utils.cpp.i
+
+src/feat_utils.s: src/feat_utils.cpp.s
+
+.PHONY : src/feat_utils.s
+
+# target to generate assembly for a file
+src/feat_utils.cpp.s:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.s
+.PHONY : src/feat_utils.cpp.s
+
 src/main_calib.o: src/main_calib.cpp.o
 
 .PHONY : src/main_calib.o
@@ -450,6 +477,9 @@ help:
 	@echo "... calibration_gennodejs"
 	@echo "... calibration_genpy"
 	@echo "... main_calib"
+	@echo "... src/feat_utils.o"
+	@echo "... src/feat_utils.i"
+	@echo "... src/feat_utils.s"
 	@echo "... src/main_calib.o"
 	@echo "... src/main_calib.i"
 	@echo "... src/main_calib.s"
