@@ -8,7 +8,7 @@ using std::endl;
 using std::cout;
 
 using namespace cv;
-using namespace cv::xfeatures2d;
+//using namespace cv::xfeatures2d;
 
 
 void AutoCalibration::matchFeatures( ) {

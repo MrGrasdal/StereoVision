@@ -11,7 +11,8 @@ else ()
 endif (MSVC)
 
 # Find libraries
-find_package(OpenCV 4 REQUIRED)
+find_package(OpenCV 4.5.0 REQUIRED
+        PATHS /usr/local)
 find_package(Eigen3 REQUIRED)
 find_package(Sophus REQUIRED)
 find_package(GeographicLib REQUIRED)

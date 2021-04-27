@@ -1,56 +1,37 @@
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /home/martin/Code/Master/autoCalib_ws/src/calibration/src/main_calib.cpp \
- /usr/include/stdc-predef.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /usr/include/stdc-predef.h \
+ /opt/ros/noetic/include/message_filters/subscriber.h \
+ /opt/ros/noetic/include/ros/ros.h /opt/ros/noetic/include/ros/time.h \
+ /opt/ros/noetic/include/ros/platform.h /usr/include/c++/9/stdlib.h \
+ /usr/include/c++/9/cstdlib \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+ /usr/include/stdlib.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn.h \
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h /usr/include/opencv4/opencv2/highgui/highgui.hpp \
- /usr/include/opencv4/opencv2/highgui.hpp \
- /usr/include/opencv4/opencv2/core.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/opencv4/opencv2/core/hal/interface.h \
- /usr/include/c++/9/cstddef \
- /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
- /usr/include/c++/9/cstdint \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
- /usr/include/c++/9/stdlib.h /usr/include/c++/9/cstdlib \
- /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
- /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
- /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
- /usr/include/x86_64-linux-gnu/sys/types.h \
  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
- /usr/include/x86_64-linux-gnu/bits/types/timer_t.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h /usr/include/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/endianness.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
@@ -67,25 +48,17 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/9/bits/std_abs.h /usr/include/c++/9/array \
- /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
- /usr/include/c++/9/bits/stl_pair.h /usr/include/c++/9/bits/move.h \
- /usr/include/c++/9/bits/concept_check.h /usr/include/c++/9/type_traits \
- /usr/include/c++/9/initializer_list /usr/include/c++/9/stdexcept \
- /usr/include/c++/9/exception /usr/include/c++/9/bits/exception.h \
- /usr/include/c++/9/bits/exception_ptr.h \
- /usr/include/c++/9/bits/exception_defines.h \
- /usr/include/c++/9/bits/cxxabi_init_exception.h \
- /usr/include/c++/9/typeinfo /usr/include/c++/9/bits/hash_bytes.h \
- /usr/include/c++/9/new /usr/include/c++/9/bits/nested_exception.h \
- /usr/include/c++/9/string /usr/include/c++/9/bits/stringfwd.h \
- /usr/include/c++/9/bits/memoryfwd.h \
+ /usr/include/c++/9/bits/std_abs.h /usr/include/c++/9/string \
+ /usr/include/c++/9/bits/stringfwd.h /usr/include/c++/9/bits/memoryfwd.h \
  /usr/include/c++/9/bits/char_traits.h \
  /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/c++/9/bits/functexcept.h \
+ /usr/include/c++/9/bits/exception_defines.h \
  /usr/include/c++/9/bits/cpp_type_traits.h \
  /usr/include/c++/9/ext/type_traits.h \
  /usr/include/c++/9/ext/numeric_traits.h \
+ /usr/include/c++/9/bits/stl_pair.h /usr/include/c++/9/bits/move.h \
+ /usr/include/c++/9/bits/concept_check.h /usr/include/c++/9/type_traits \
  /usr/include/c++/9/bits/stl_iterator_base_types.h \
  /usr/include/c++/9/bits/stl_iterator_base_funcs.h \
  /usr/include/c++/9/debug/assertions.h \
@@ -94,14 +67,23 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/c++/9/bits/predefined_ops.h \
  /usr/include/c++/9/bits/postypes.h /usr/include/c++/9/cwchar \
  /usr/include/wchar.h /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+ /usr/include/c++/9/cstdint \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/c++/9/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++allocator.h \
- /usr/include/c++/9/ext/new_allocator.h \
+ /usr/include/c++/9/ext/new_allocator.h /usr/include/c++/9/new \
+ /usr/include/c++/9/exception /usr/include/c++/9/bits/exception.h \
+ /usr/include/c++/9/bits/exception_ptr.h \
+ /usr/include/c++/9/bits/cxxabi_init_exception.h \
+ /usr/include/c++/9/typeinfo /usr/include/c++/9/bits/hash_bytes.h \
+ /usr/include/c++/9/bits/nested_exception.h \
  /usr/include/c++/9/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++locale.h \
  /usr/include/c++/9/clocale /usr/include/locale.h \
@@ -112,6 +94,7 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/c++/9/bits/stl_function.h \
  /usr/include/c++/9/backward/binders.h \
  /usr/include/c++/9/bits/range_access.h \
+ /usr/include/c++/9/initializer_list \
  /usr/include/c++/9/bits/basic_string.h \
  /usr/include/c++/9/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h \
@@ -141,19 +124,26 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/9/bits/functional_hash.h \
- /usr/include/c++/9/bits/basic_string.tcc \
- /usr/include/opencv4/opencv2/core/version.hpp \
- /usr/include/opencv4/opencv2/core/base.hpp \
- /usr/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/include/c++/9/climits /usr/include/c++/9/algorithm \
- /usr/include/c++/9/bits/stl_algo.h \
- /usr/include/c++/9/bits/algorithmfwd.h \
- /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
- /usr/include/c++/9/bits/stl_construct.h \
- /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
- /usr/include/opencv4/opencv2/core/cvstd.hpp /usr/include/c++/9/cstring \
- /usr/include/c++/9/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/9/bits/basic_string.tcc /usr/include/c++/9/iostream \
+ /usr/include/c++/9/ostream /usr/include/c++/9/ios \
+ /usr/include/c++/9/bits/ios_base.h \
+ /usr/include/c++/9/bits/locale_classes.h \
+ /usr/include/c++/9/bits/locale_classes.tcc \
+ /usr/include/c++/9/system_error \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
+ /usr/include/c++/9/stdexcept /usr/include/c++/9/streambuf \
+ /usr/include/c++/9/bits/streambuf.tcc \
+ /usr/include/c++/9/bits/basic_ios.h \
+ /usr/include/c++/9/bits/locale_facets.h /usr/include/c++/9/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
+ /usr/include/c++/9/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
+ /usr/include/c++/9/bits/locale_facets.tcc \
+ /usr/include/c++/9/bits/basic_ios.tcc \
+ /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
+ /usr/include/c++/9/bits/istream.tcc /usr/include/c++/9/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -162,85 +152,24 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_uninitialized.h \
- /usr/include/c++/9/bits/stl_raw_storage_iter.h \
- /usr/include/c++/9/ext/concurrence.h \
- /usr/include/c++/9/bits/uses_allocator.h \
- /usr/include/c++/9/bits/unique_ptr.h /usr/include/c++/9/tuple \
- /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/bits/shared_ptr.h \
- /usr/include/c++/9/bits/shared_ptr_base.h \
- /usr/include/c++/9/bits/allocated_ptr.h \
- /usr/include/c++/9/bits/refwrap.h \
- /usr/include/c++/9/ext/aligned_buffer.h \
- /usr/include/c++/9/bits/shared_ptr_atomic.h \
- /usr/include/c++/9/bits/atomic_base.h \
- /usr/include/c++/9/bits/atomic_lockfree_defines.h \
- /usr/include/c++/9/backward/auto_ptr.h \
- /usr/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/include/opencv4/opencv2/core/vsx_utils.hpp /usr/include/assert.h \
- /usr/include/opencv4/opencv2/core/check.hpp \
- /usr/include/opencv4/opencv2/core/traits.hpp \
- /usr/include/opencv4/opencv2/core/matx.hpp \
- /usr/include/opencv4/opencv2/core/saturate.hpp \
- /usr/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/include/opencv4/opencv2/core/types.hpp /usr/include/c++/9/cfloat \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
- /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_vector.h \
- /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /usr/include/opencv4/opencv2/core/mat.hpp \
- /usr/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/include/opencv4/opencv2/core/persistence.hpp \
- /usr/include/opencv4/opencv2/core/operations.hpp \
- /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /usr/include/c++/9/complex /usr/include/c++/9/sstream \
- /usr/include/c++/9/istream /usr/include/c++/9/ios \
- /usr/include/c++/9/bits/ios_base.h \
- /usr/include/c++/9/bits/locale_classes.h \
- /usr/include/c++/9/bits/locale_classes.tcc \
- /usr/include/c++/9/system_error \
- /usr/include/x86_64-linux-gnu/c++/9/bits/error_constants.h \
- /usr/include/c++/9/streambuf /usr/include/c++/9/bits/streambuf.tcc \
- /usr/include/c++/9/bits/basic_ios.h \
- /usr/include/c++/9/bits/locale_facets.h /usr/include/c++/9/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_base.h \
- /usr/include/c++/9/bits/streambuf_iterator.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/ctype_inline.h \
- /usr/include/c++/9/bits/locale_facets.tcc \
- /usr/include/c++/9/bits/basic_ios.tcc /usr/include/c++/9/ostream \
- /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/bits/istream.tcc \
- /usr/include/c++/9/bits/sstream.tcc \
- /usr/include/opencv4/opencv2/core/utility.hpp \
- /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
- /usr/include/c++/9/mutex /usr/include/c++/9/chrono \
- /usr/include/c++/9/ratio /usr/include/c++/9/ctime \
- /usr/include/c++/9/bits/parse_numbers.h \
- /usr/include/c++/9/bits/std_mutex.h \
- /usr/include/c++/9/bits/unique_lock.h \
- /usr/include/opencv4/opencv2/core/optim.hpp \
- /usr/include/opencv4/opencv2/core/ovx.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/opencv4/opencv2/imgcodecs.hpp \
- /usr/include/opencv4/opencv2/videoio.hpp \
- /opt/ros/noetic/include/cv_bridge/cv_bridge.h \
- /opt/ros/noetic/include/sensor_msgs/Image.h /usr/include/c++/9/map \
- /usr/include/c++/9/bits/stl_tree.h /usr/include/c++/9/bits/stl_map.h \
- /usr/include/c++/9/bits/stl_multimap.h \
- /usr/include/c++/9/bits/erase_if.h /opt/ros/noetic/include/ros/types.h \
- /opt/ros/noetic/include/ros/serialization.h \
- /opt/ros/noetic/include/ros/roscpp_serialization_macros.h \
- /opt/ros/noetic/include/ros/macros.h /opt/ros/noetic/include/ros/time.h \
- /opt/ros/noetic/include/ros/platform.h /usr/include/c++/9/iostream \
  /opt/ros/noetic/include/ros/exception.h \
  /opt/ros/noetic/include/ros/duration.h /usr/include/c++/9/math.h \
+ /usr/include/c++/9/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /opt/ros/noetic/include/ros/rostime_decl.h \
+ /opt/ros/noetic/include/ros/macros.h \
  /usr/include/boost/math/special_functions/round.hpp \
  /usr/include/boost/math/tools/config.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp \
+ /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/9/cstddef \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp /usr/include/unistd.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -263,18 +192,29 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/config/workaround.hpp \
  /usr/include/boost/type_traits/is_integral.hpp \
  /usr/include/boost/type_traits/integral_constant.hpp \
- /usr/include/boost/config/no_tr1/cmath.hpp \
+ /usr/include/c++/9/algorithm /usr/include/c++/9/utility \
+ /usr/include/c++/9/bits/stl_relops.h /usr/include/c++/9/bits/stl_algo.h \
+ /usr/include/c++/9/bits/algorithmfwd.h \
+ /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
+ /usr/include/c++/9/bits/stl_construct.h \
+ /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
+ /usr/include/boost/config/no_tr1/cmath.hpp /usr/include/c++/9/cfloat \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
  /usr/include/boost/math/tools/user.hpp \
  /usr/include/boost/math/policies/error_handling.hpp \
  /usr/include/c++/9/iomanip /usr/include/c++/9/locale \
- /usr/include/c++/9/bits/locale_facets_nonio.h \
+ /usr/include/c++/9/bits/locale_facets_nonio.h /usr/include/c++/9/ctime \
  /usr/include/x86_64-linux-gnu/c++/9/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/9/bits/codecvt.h \
  /usr/include/c++/9/bits/locale_facets_nonio.tcc \
  /usr/include/c++/9/bits/locale_conv.h \
- /usr/include/c++/9/bits/quoted_string.h \
- /usr/include/boost/config/no_tr1/complex.hpp \
+ /usr/include/c++/9/bits/unique_ptr.h /usr/include/c++/9/tuple \
+ /usr/include/c++/9/array /usr/include/c++/9/bits/uses_allocator.h \
+ /usr/include/c++/9/bits/invoke.h /usr/include/c++/9/bits/quoted_string.h \
+ /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
+ /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/boost/config/no_tr1/complex.hpp /usr/include/c++/9/complex \
  /usr/include/boost/math/policies/policy.hpp \
  /usr/include/boost/mpl/list.hpp /usr/include/boost/mpl/limits/list.hpp \
  /usr/include/boost/mpl/aux_/na.hpp /usr/include/boost/mpl/bool.hpp \
@@ -557,11 +497,14 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/mpl/greater_equal.hpp \
  /usr/include/boost/mpl/aux_/preprocessed/gcc/greater_equal.hpp \
  /usr/include/boost/static_assert.hpp /usr/include/boost/assert.hpp \
- /usr/include/boost/math/tools/precision.hpp \
+ /usr/include/assert.h /usr/include/boost/math/tools/precision.hpp \
  /usr/include/boost/limits.hpp /usr/include/boost/throw_exception.hpp \
  /usr/include/boost/exception/exception.hpp \
  /usr/include/boost/current_function.hpp \
  /usr/include/boost/math/special_functions/math_fwd.hpp \
+ /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_uninitialized.h \
+ /usr/include/c++/9/bits/stl_vector.h \
+ /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/boost/math/special_functions/detail/round_fwd.hpp \
  /usr/include/boost/math/tools/promotion.hpp \
  /usr/include/boost/type_traits/is_floating_point.hpp \
@@ -605,13 +548,41 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/predef/os/android.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/quadmath.h \
  /usr/include/x86_64-linux-gnu/sys/time.h \
- /opt/ros/noetic/include/ros/serialized_message.h \
- /usr/include/boost/shared_array.hpp \
- /usr/include/boost/smart_ptr/shared_array.hpp \
+ /opt/ros/noetic/include/ros/rate.h /opt/ros/noetic/include/ros/console.h \
+ /opt/ros/noetic/include/ros/console_backend.h /usr/include/c++/9/cstdarg \
+ /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
+ /usr/include/c++/9/ext/aligned_buffer.h \
+ /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/bits/stl_multimap.h \
+ /usr/include/c++/9/bits/erase_if.h /usr/include/log4cxx/level.h \
+ /usr/include/log4cxx/logstring.h /usr/include/log4cxx/log4cxx.h \
+ /usr/include/log4cxx/helpers/transcoder.h \
+ /usr/include/log4cxx/helpers/objectimpl.h \
+ /usr/include/log4cxx/helpers/object.h \
+ /usr/include/log4cxx/helpers/class.h \
+ /usr/include/log4cxx/helpers/objectptr.h \
+ /usr/include/log4cxx/helpers/classregistration.h \
+ /opt/ros/noetic/include/rosconsole/macros_generated.h \
+ /opt/ros/noetic/include/ros/assert.h \
+ /opt/ros/noetic/include/ros/static_assert.h \
+ /opt/ros/noetic/include/ros/common.h \
+ /opt/ros/noetic/include/ros/forwards.h /usr/include/c++/9/set \
+ /usr/include/c++/9/bits/stl_set.h /usr/include/c++/9/bits/stl_multiset.h \
+ /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
+ /usr/include/c++/9/bits/allocated_ptr.h /usr/include/c++/9/bits/list.tcc \
+ /usr/include/boost/shared_ptr.hpp \
+ /usr/include/boost/smart_ptr/shared_ptr.hpp \
+ /usr/include/boost/config/no_tr1/memory.hpp /usr/include/c++/9/memory \
+ /usr/include/c++/9/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/9/ext/concurrence.h \
+ /usr/include/c++/9/bits/shared_ptr.h \
+ /usr/include/c++/9/bits/shared_ptr_base.h \
+ /usr/include/c++/9/bits/refwrap.h \
+ /usr/include/c++/9/bits/shared_ptr_atomic.h \
+ /usr/include/c++/9/bits/atomic_base.h \
+ /usr/include/c++/9/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/9/backward/auto_ptr.h \
  /usr/include/boost/checked_delete.hpp \
  /usr/include/boost/core/checked_delete.hpp \
- /usr/include/boost/smart_ptr/shared_ptr.hpp \
- /usr/include/boost/config/no_tr1/memory.hpp \
  /usr/include/boost/smart_ptr/detail/shared_count.hpp \
  /usr/include/boost/smart_ptr/bad_weak_ptr.hpp \
  /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
@@ -623,6 +594,7 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
  /usr/include/boost/core/addressof.hpp \
  /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+ /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
  /usr/include/boost/smart_ptr/detail/sp_nullptr_t.hpp \
  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
@@ -637,49 +609,6 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/smart_ptr/detail/operator_bool.hpp \
  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
- /usr/include/boost/shared_ptr.hpp \
- /opt/ros/noetic/include/ros/message_traits.h \
- /opt/ros/noetic/include/ros/message_forward.h \
- /usr/include/boost/type_traits/remove_const.hpp \
- /opt/ros/noetic/include/ros/builtin_message_traits.h \
- /opt/ros/noetic/include/ros/message_traits.h \
- /opt/ros/noetic/include/ros/datatypes.h /usr/include/c++/9/set \
- /usr/include/c++/9/bits/stl_set.h /usr/include/c++/9/bits/stl_multiset.h \
- /usr/include/c++/9/list /usr/include/c++/9/bits/stl_list.h \
- /usr/include/c++/9/bits/list.tcc /usr/include/boost/array.hpp \
- /usr/include/boost/swap.hpp /usr/include/boost/core/swap.hpp \
- /usr/include/boost/detail/iterator.hpp /usr/include/c++/9/iterator \
- /usr/include/c++/9/bits/stream_iterator.h \
- /usr/include/boost/call_traits.hpp \
- /usr/include/boost/detail/call_traits.hpp \
- /usr/include/boost/type_traits/is_enum.hpp \
- /usr/include/boost/type_traits/is_pointer.hpp \
- /opt/ros/noetic/include/ros/message_operations.h \
- /opt/ros/noetic/include/std_msgs/Header.h \
- /opt/ros/noetic/include/sensor_msgs/CompressedImage.h \
- /opt/ros/noetic/include/sensor_msgs/image_encodings.h \
- /opt/ros/noetic/include/ros/static_assert.h \
- /usr/include/opencv4/opencv2/core/core.hpp \
- /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc/types_c.h \
- /usr/include/opencv4/opencv2/core/core_c.h \
- /usr/include/opencv4/opencv2/core/types_c.h \
- /opt/ros/noetic/include/message_filters/subscriber.h \
- /opt/ros/noetic/include/ros/ros.h /opt/ros/noetic/include/ros/rate.h \
- /opt/ros/noetic/include/ros/console.h \
- /opt/ros/noetic/include/ros/console_backend.h /usr/include/c++/9/cstdarg \
- /usr/include/log4cxx/level.h /usr/include/log4cxx/logstring.h \
- /usr/include/log4cxx/log4cxx.h /usr/include/log4cxx/helpers/transcoder.h \
- /usr/include/log4cxx/helpers/objectimpl.h \
- /usr/include/log4cxx/helpers/object.h \
- /usr/include/log4cxx/helpers/class.h \
- /usr/include/log4cxx/helpers/objectptr.h \
- /usr/include/log4cxx/helpers/classregistration.h \
- /opt/ros/noetic/include/rosconsole/macros_generated.h \
- /opt/ros/noetic/include/ros/assert.h \
- /opt/ros/noetic/include/ros/common.h \
- /opt/ros/noetic/include/ros/forwards.h \
  /usr/include/boost/make_shared.hpp \
  /usr/include/boost/smart_ptr/make_shared.hpp \
  /usr/include/boost/smart_ptr/make_shared_object.hpp \
@@ -695,6 +624,8 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/type_traits/alignment_of.hpp \
  /usr/include/boost/type_traits/is_pod.hpp \
  /usr/include/boost/type_traits/is_scalar.hpp \
+ /usr/include/boost/type_traits/is_enum.hpp \
+ /usr/include/boost/type_traits/is_pointer.hpp \
  /usr/include/boost/type_traits/is_member_pointer.hpp \
  /usr/include/boost/type_traits/is_member_function_pointer.hpp \
  /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
@@ -755,10 +686,27 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/function/function_template.hpp \
  /usr/include/boost/core/no_exceptions_support.hpp \
  /opt/ros/noetic/include/ros/exceptions.h \
+ /opt/ros/noetic/include/ros/datatypes.h \
  /opt/ros/noetic/include/ros/serialized_message.h \
+ /opt/ros/noetic/include/ros/roscpp_serialization_macros.h \
+ /usr/include/boost/shared_array.hpp \
+ /usr/include/boost/smart_ptr/shared_array.hpp \
+ /opt/ros/noetic/include/ros/types.h \
  /opt/ros/noetic/include/ros/node_handle.h \
  /opt/ros/noetic/include/ros/publisher.h \
- /opt/ros/noetic/include/ros/message.h /usr/include/boost/bind.hpp \
+ /opt/ros/noetic/include/ros/message.h /usr/include/boost/array.hpp \
+ /usr/include/boost/swap.hpp /usr/include/boost/core/swap.hpp \
+ /usr/include/boost/detail/iterator.hpp /usr/include/c++/9/iterator \
+ /usr/include/c++/9/bits/stream_iterator.h \
+ /opt/ros/noetic/include/ros/serialization.h \
+ /opt/ros/noetic/include/ros/serialized_message.h \
+ /opt/ros/noetic/include/ros/message_traits.h \
+ /opt/ros/noetic/include/ros/message_forward.h \
+ /usr/include/boost/type_traits/remove_const.hpp \
+ /opt/ros/noetic/include/ros/builtin_message_traits.h \
+ /opt/ros/noetic/include/ros/message_traits.h \
+ /usr/include/boost/call_traits.hpp \
+ /usr/include/boost/detail/call_traits.hpp /usr/include/boost/bind.hpp \
  /usr/include/boost/bind/bind.hpp /usr/include/boost/type.hpp \
  /usr/include/boost/is_placeholder.hpp /usr/include/boost/bind/arg.hpp \
  /usr/include/boost/visit_each.hpp /usr/include/boost/core/is_same.hpp \
@@ -783,6 +731,10 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/system/detail/generic_category.hpp \
  /usr/include/boost/system/detail/system_category_posix.hpp \
  /usr/include/boost/system/detail/std_interoperability.hpp \
+ /usr/include/c++/9/mutex /usr/include/c++/9/chrono \
+ /usr/include/c++/9/ratio /usr/include/c++/9/bits/parse_numbers.h \
+ /usr/include/c++/9/bits/std_mutex.h \
+ /usr/include/c++/9/bits/unique_lock.h \
  /usr/include/boost/config/abi_prefix.hpp \
  /usr/include/boost/config/abi_suffix.hpp \
  /usr/include/boost/thread/lock_types.hpp \
@@ -1298,5 +1250,62 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /opt/ros/noetic/include/message_filters/connection.h \
  /opt/ros/noetic/include/message_filters/null_types.h \
  /opt/ros/noetic/include/message_filters/signal9.h \
+ /opt/ros/noetic/include/message_filters/sync_policies/approximate_time.h \
+ /opt/ros/noetic/include/sensor_msgs/Image.h \
+ /opt/ros/noetic/include/ros/message_operations.h \
+ /opt/ros/noetic/include/std_msgs/Header.h \
  /opt/ros/noetic/include/sensor_msgs/CameraInfo.h \
- /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
+ /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h \
+ /home/martin/Code/Master/autoCalib_ws/devel/include/calibration//gnssGGA.h \
+ /home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA_status.h \
+ /usr/include/opencv4/opencv2/core.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
+ /usr/include/opencv4/opencv2/core/version.hpp \
+ /usr/include/opencv4/opencv2/core/base.hpp \
+ /usr/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/include/opencv4/opencv2/core/check.hpp \
+ /usr/include/opencv4/opencv2/core/traits.hpp \
+ /usr/include/opencv4/opencv2/core/matx.hpp \
+ /usr/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/include/opencv4/opencv2/core/types.hpp \
+ /usr/include/opencv4/opencv2/core/mat.hpp \
+ /usr/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/include/opencv4/opencv2/core/operations.hpp \
+ /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/opencv4/opencv2/core/optim.hpp \
+ /usr/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/include/opencv4/opencv2/core/cvdef.h \
+ /usr/include/opencv4/opencv2/highgui/highgui.hpp \
+ /usr/include/opencv4/opencv2/highgui.hpp \
+ /usr/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/include/opencv4/opencv2/videoio.hpp \
+ /opt/ros/noetic/include/cv_bridge/cv_bridge.h \
+ /opt/ros/noetic/include/sensor_msgs/CompressedImage.h \
+ /opt/ros/noetic/include/sensor_msgs/image_encodings.h \
+ /usr/include/opencv4/opencv2/core/core.hpp \
+ /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc.hpp \
+ /usr/include/opencv4/opencv2/imgproc/types_c.h \
+ /usr/include/opencv4/opencv2/core/core_c.h \
+ /usr/include/opencv4/opencv2/core/types_c.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/src/../include/feat_utils.h \
+ /usr/include/opencv4/opencv2/features2d.hpp \
+ /usr/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/config.h \
+ /usr/include/opencv4/opencv2/calib3d.hpp \
+ /usr/include/opencv4/opencv2/core/affine.hpp

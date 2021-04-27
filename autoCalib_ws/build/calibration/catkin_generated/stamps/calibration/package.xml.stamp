@@ -54,12 +54,13 @@
   <build_depend>opencv2</build_depend>
   <build_export_depend>cv_bridge</build_export_depend>
   <build_export_depend>image_transport</build_export_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
   <exec_depend>cv_bridge</exec_depend>
   <exec_depend>image_transport</exec_depend>
   <exec_depend>opencv2</exec_depend>
   <depend>sensor_msgs</depend>
   <depend>message_filters</depend>
-
 
 
   <!-- The export tag contains other, unspecified, tags -->

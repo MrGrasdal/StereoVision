@@ -12,6 +12,7 @@
 #include <sensor_msgs/CameraInfo.h>
 #include <calibration//gnssGGA.h>
 
+#include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <cv_bridge/cv_bridge.h>
 
@@ -46,18 +47,20 @@ void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
     vector<Point2f> kptsL, kptsR;
     vector<DMatch> matches;
 
-    _feat.extractKpts(imgL, imgR, kptsL, kptsR, matches, "SURF", true);
+    _feat.extractKpts(imgL, imgR, kptsL, kptsR, matches, "SIFT", true);
 
     int i = 0;
-
-
-
 }
 
 
 int main(int argc, char **argv) {
 
     ROS_INFO("Starting node");
+
+    cout << "OpenCV version : " << CV_VERSION << endl;
+    cout << "Major version : " << CV_MAJOR_VERSION << endl;
+    cout << "Minor version : " << CV_MINOR_VERSION << endl;
+    cout << "Subminor version : " << CV_SUBMINOR_VERSION << endl;
 
     ros::init(argc, argv, "autoCalibration");
     ros::NodeHandle nh;

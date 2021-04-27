@@ -4,10 +4,12 @@
 #ifndef SRC_FEAT_UTILS_H
 #define SRC_FEAT_UTILS_H
 
+#include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include "opencv2/features2d.hpp"
-#include "opencv2/xfeatures2d.hpp"
+#include <opencv2/features2d.hpp>
+//#include "opencv2/xfeatures2d.hpp"
 #include <opencv2/calib3d.hpp>
+
 
 #include <string>
 #include <iostream>
@@ -15,7 +17,6 @@
 
 using namespace cv;
 using namespace std;
-using namespace cv::xfeatures2d;
 
 class FeatureUtils{
 

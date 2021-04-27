@@ -5,7 +5,7 @@
 		<Option title="calibration"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospy\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_filters\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\pluginlib\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\class_loader\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_generation\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gencpp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genmsg\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geneus\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geneus\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genlisp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gennodejs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genpy\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genpy\cmake\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googlemock\cmake\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\devel\;CMake Files\..\devel\share\;CMake Files\..\devel\share\speak_listen\;CMake Files\..\devel\share\speak_listen\cmake\;CMake Files\..\devel\share\calibration\;CMake Files\..\devel\share\calibration\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\speak_listen\;CMake Files\cmake-build-debug\speak_listen\catkin_generated\;CMake Files\cmake-build-debug\speak_listen\cmake\;CMake Files\cmake-build-debug\calibration\;CMake Files\cmake-build-debug\calibration\catkin_generated\;CMake Files\cmake-build-debug\calibration\cmake\;CMake Files\speak_listen\;CMake Files\calibration\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospy\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospy\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\image_transport\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\image_transport\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_filters\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\pluginlib\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\class_loader\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_generation\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gencpp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genmsg\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geneus\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\geneus\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genlisp\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gennodejs\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genpy\;CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\genpy\cmake\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googlemock\cmake\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\..\usr\local\share\cv_bridge\;CMake Files\..\..\..\..\..\..\usr\local\share\cv_bridge\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_python-1.71.0\;CMake Files\..\..\..\..\build\;CMake Files\..\devel\;CMake Files\..\devel\share\;CMake Files\..\devel\share\speak_listen\;CMake Files\..\devel\share\speak_listen\cmake\;CMake Files\..\devel\share\calibration\;CMake Files\..\devel\share\calibration\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;CMake Files\cmake-build-debug\speak_listen\;CMake Files\cmake-build-debug\speak_listen\catkin_generated\;CMake Files\cmake-build-debug\speak_listen\cmake\;CMake Files\cmake-build-debug\cv_bridge\;CMake Files\cmake-build-debug\cv_bridge\catkin_generated\;CMake Files\cmake-build-debug\calibration\;CMake Files\cmake-build-debug\calibration\catkin_generated\;CMake Files\cmake-build-debug\calibration\cmake\;CMake Files\speak_listen\;CMake Files\cv_bridge\;CMake Files\cv_bridge\cmake\;CMake Files\cv_bridge\python\;CMake Files\cv_bridge\src\;CMake Files\cv_bridge\test\;CMake Files\calibration\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration"/>
@@ -48,11 +48,70 @@
 					<Add option="-DROS_PACKAGE_NAME=&quot;calibration&quot;"/>
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/martin/Code/Master/autoCalib_ws/devel/include"/>
-					<Add directory="/home/martin/Code/Master/autoCalib_ws/src/calibration/include"/>
 					<Add directory="/opt/ros/noetic/include"/>
 					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv4"/>
 					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include/opencv4/opencv2"/>
+					<Add directory="/home/martin/Code/Master/autoCalib_ws/src/calibration/include"/>
+					<Add directory="/home/martin/build"/>
+					<Add directory="/home/martin/opencv-master/include"/>
+					<Add directory="/home/martin/opencv-master/modules/core/include"/>
+					<Add directory="/home/martin/opencv-master/modules/flann/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/hdf/include"/>
+					<Add directory="/home/martin/opencv-master/modules/imgproc/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/intensity_transform/include"/>
+					<Add directory="/home/martin/opencv-master/modules/ml/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/phase_unwrapping/include"/>
+					<Add directory="/home/martin/opencv-master/modules/photo/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/plot/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/quality/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/reg/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/surface_matching/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/viz/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/xphoto/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/alphamat/include"/>
+					<Add directory="/home/martin/opencv-master/modules/dnn/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/dnn_superres/include"/>
+					<Add directory="/home/martin/opencv-master/modules/features2d/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/freetype/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/fuzzy/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/hfs/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/img_hash/include"/>
+					<Add directory="/home/martin/opencv-master/modules/imgcodecs/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/line_descriptor/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/saliency/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/text/include"/>
+					<Add directory="/home/martin/opencv-master/modules/videoio/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/wechat_qrcode/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/barcode/include"/>
+					<Add directory="/home/martin/opencv-master/modules/calib3d/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/datasets/include"/>
+					<Add directory="/home/martin/opencv-master/modules/highgui/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/mcc/include"/>
+					<Add directory="/home/martin/opencv-master/modules/objdetect/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/rapid/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/rgbd/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/shape/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/structured_light/include"/>
+					<Add directory="/home/martin/opencv-master/modules/ts/include"/>
+					<Add directory="/home/martin/opencv-master/modules/video/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/videostab/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/xfeatures2d/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/ximgproc/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/xobjdetect/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/aruco/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/bgsegm/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/bioinspired/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/ccalib/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/dnn_objdetect/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/dpm/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/face/include"/>
+					<Add directory="/home/martin/opencv-master/modules/gapi/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/optflow/include"/>
+					<Add directory="/home/martin/opencv-master/modules/stitching/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/superres/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/tracking/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/stereo/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -79,11 +138,70 @@
 					<Add option="-DROS_PACKAGE_NAME=&quot;calibration&quot;"/>
 					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
 					<Add directory="/home/martin/Code/Master/autoCalib_ws/devel/include"/>
-					<Add directory="/home/martin/Code/Master/autoCalib_ws/src/calibration/include"/>
 					<Add directory="/opt/ros/noetic/include"/>
 					<Add directory="/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/usr/include/opencv4"/>
 					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/local/include/opencv4/opencv2"/>
+					<Add directory="/home/martin/Code/Master/autoCalib_ws/src/calibration/include"/>
+					<Add directory="/home/martin/build"/>
+					<Add directory="/home/martin/opencv-master/include"/>
+					<Add directory="/home/martin/opencv-master/modules/core/include"/>
+					<Add directory="/home/martin/opencv-master/modules/flann/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/hdf/include"/>
+					<Add directory="/home/martin/opencv-master/modules/imgproc/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/intensity_transform/include"/>
+					<Add directory="/home/martin/opencv-master/modules/ml/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/phase_unwrapping/include"/>
+					<Add directory="/home/martin/opencv-master/modules/photo/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/plot/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/quality/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/reg/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/surface_matching/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/viz/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/xphoto/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/alphamat/include"/>
+					<Add directory="/home/martin/opencv-master/modules/dnn/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/dnn_superres/include"/>
+					<Add directory="/home/martin/opencv-master/modules/features2d/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/freetype/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/fuzzy/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/hfs/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/img_hash/include"/>
+					<Add directory="/home/martin/opencv-master/modules/imgcodecs/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/line_descriptor/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/saliency/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/text/include"/>
+					<Add directory="/home/martin/opencv-master/modules/videoio/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/wechat_qrcode/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/barcode/include"/>
+					<Add directory="/home/martin/opencv-master/modules/calib3d/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/datasets/include"/>
+					<Add directory="/home/martin/opencv-master/modules/highgui/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/mcc/include"/>
+					<Add directory="/home/martin/opencv-master/modules/objdetect/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/rapid/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/rgbd/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/shape/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/structured_light/include"/>
+					<Add directory="/home/martin/opencv-master/modules/ts/include"/>
+					<Add directory="/home/martin/opencv-master/modules/video/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/videostab/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/xfeatures2d/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/ximgproc/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/xobjdetect/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/aruco/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/bgsegm/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/bioinspired/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/ccalib/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/dnn_objdetect/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/dpm/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/face/include"/>
+					<Add directory="/home/martin/opencv-master/modules/gapi/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/optflow/include"/>
+					<Add directory="/home/martin/opencv-master/modules/stitching/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/superres/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/tracking/include"/>
+					<Add directory="/home/martin/opencv_contrib-master/modules/stereo/include"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -345,6 +463,9 @@
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/tools/rt.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\"/>
 		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/__init__.py.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\"/>
+		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/_setup_util.py.in">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\"/>
 		</Unit>
@@ -375,7 +496,13 @@
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/pkgConfig.cmake.in">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\"/>
 		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/python_distutils_install.sh.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\"/>
+		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/rosinstall.in">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/safe_execute_install.cmake.in">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\"/>
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/catkin/cmake/templates/setup.bash.in">
@@ -476,15 +603,6 @@
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/rospy/cmake/rospyConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\rospy\cmake\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/cv_bridge/cmake/cv_bridge-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\cmake\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/cv_bridge/cmake/cv_bridgeConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\cmake\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/cv_bridge/cmake/cv_bridgeConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\cv_bridge\cmake\"/>
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../opt/ros/noetic/share/sensor_msgs/cmake/sensor_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\"/>
@@ -648,17 +766,50 @@
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/src/googletest/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\src\googletest\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/share/cv_bridge/cmake/cv_bridge-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\cv_bridge\cmake\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/share/cv_bridge/cmake/cv_bridgeConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\cv_bridge\cmake\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/share/cv_bridge/cmake/cv_bridgeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\share\cv_bridge\cmake\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.71.0.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Boost-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.71.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_headers-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_python-1.71.0/boost_python-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_python-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_python-1.71.0/boost_python-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_python-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_python-1.71.0/libboost_python-variant-shared-py3.8.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_python-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../../../usr/lib/x86_64-linux-gnu/cmake/boost_python-1.71.0/libboost_python-variant-static-py3.8.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\boost_python-1.71.0\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../build/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\build\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../build/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\build\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../../../../build/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\build\"/>
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/../devel/share/speak_listen/cmake/speak_listen-msg-paths.cmake">
 			<Option virtualFolder="CMake Files\..\devel\share\speak_listen\cmake\"/>
@@ -690,6 +841,15 @@
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/speak_listen/cmake/speak_listen-genmsg.cmake">
 			<Option virtualFolder="CMake Files\cmake-build-debug\speak_listen\cmake\"/>
 		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/cv_bridge/catkin_generated/ordered_paths.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\cv_bridge\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/cv_bridge/catkin_generated/package.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\cv_bridge\catkin_generated\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/cv_bridge/catkin_generated/setup_py_interrogation.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-debug\cv_bridge\catkin_generated\"/>
+		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration/catkin_generated/calibration-msg-extras.cmake.develspace.in">
 			<Option virtualFolder="CMake Files\cmake-build-debug\calibration\catkin_generated\"/>
 		</Unit>
@@ -710,6 +870,30 @@
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/speak_listen/package.xml">
 			<Option virtualFolder="CMake Files\speak_listen\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cv_bridge\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/package.xml">
+			<Option virtualFolder="CMake Files\cv_bridge\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/setup.py">
+			<Option virtualFolder="CMake Files\cv_bridge\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/cmake/cv_bridge-extras.cmake.in">
+			<Option virtualFolder="CMake Files\cv_bridge\cmake\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/python/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cv_bridge\python\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/python/__init__.py.plain.in">
+			<Option virtualFolder="CMake Files\cv_bridge\python\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cv_bridge\src\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/cv_bridge/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\cv_bridge\test\"/>
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/autoCalib_ws/src/calibration/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\calibration\"/>

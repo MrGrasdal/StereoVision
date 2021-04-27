@@ -1,12 +1,23 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(calibration)
 
+set(cv_bridge_DIR /usr/local/share/cv_bridge/cmake)
+
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+find_package(OpenCV 4.5.0 REQUIRED
+        NO_MODULE #Should be optional, tells CMake to use config mode
+        PATHS /usr/local # Tells CMake to look here
+        NO_DEFAULT_PATH #and don't look anywhere else)
+        )
+
+message("OpenCV version: ${OpenCV_VERSION}")
+
+
 find_package(catkin REQUIRED COMPONENTS
         cv_bridge
         image_transport
@@ -16,7 +27,8 @@ find_package(catkin REQUIRED COMPONENTS
         message_generation
         )
 
-find_package(OpenCV 4 REQUIRED)
+
+message("OpenCV version: ${OpenCV_VERSION}")
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -103,6 +115,26 @@ generate_messages(
 #   cfg/DynReconf2.cfg
 # )
 
+#SET(OpenCV_LIBRARIES opencv_core opencv_highgui opencv_imgproc )
+set(OpenCV_INCLUDE_DIRS
+        /usr/local/include
+        /usr/local/include/opencv4/opencv2
+        #/home/martin/opencv/build/include
+        )
+
+set(OpenCV_LIB_DIR
+        /usr/local/lib
+        )
+
+set(OpenCV_LIBS
+        opencv_core
+        opencv_highgui
+        opencv_imgcodecs
+        opencv_features2d
+        opencv_xfeatures2d
+        )
+
+
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -115,12 +147,14 @@ generate_messages(
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES calibration
-        CATKIN_DEPENDS message_runtime
+        CATKIN_DEPENDS
+        message_runtime
         cv_bridge
         image_transport
         message_filters
-#  DEPENDS system_lib
+        #DEPENDS system_lib
 )
+
 
 ###########
 ## Build ##
@@ -129,11 +163,14 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-        include
         ${catkin_INCLUDE_DIRS}
         ${OpenCV_INCLUDE_DIRS}
+        include
+
+
 )
 
+link_directories(${OpenCV_LIB_DIR})
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/calibration.cpp
@@ -221,7 +258,9 @@ include_directories(
 
 
 add_executable(main_calib src/main_calib.cpp src/feat_utils.cpp)
-target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBS})
 add_dependencies(main_calib calibration_generate_messages_cpp)
+
+
 
 

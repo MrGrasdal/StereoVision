@@ -42,18 +42,44 @@ CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (c
 -- BUILD_SHARED_LIBS is on
 -- BUILD_SHARED_LIBS is on
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--- ~~  traversing 2 packages in topological order:
+-- ~~  traversing 3 packages in topological order:
 -- ~~  - speak_listen
+-- ~~  - cv_bridge
 -- ~~  - calibration
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 -- +++ processing catkin package: 'speak_listen'
 -- ==> add_subdirectory(speak_listen)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4") 
 -- speak_listen: 1 messages, 1 services
+-- +++ processing catkin package: 'cv_bridge'
+-- ==> add_subdirectory(cv_bridge)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found version "3.8.5") 
+-- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4.5.0") 
+-- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4") found components: opencv_core opencv_imgproc opencv_imgcodecs 
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.5", minimum required is "3.8") 
 -- +++ processing catkin package: 'calibration'
 -- ==> add_subdirectory(calibration)
+-- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4.5.0") 
+OpenCV version: 4.5.2
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+OpenCV version: 4.5.2
 -- calibration: 2 messages, 0 services
 -- Configuring done
+CMake Warning at calibration/CMakeLists.txt:260 (add_executable):
+  Cannot generate a safe runtime search path for target main_calib because
+  there is a cycle in the constraint graph:
+
+    dir 0 is [/usr/local/lib]
+      dir 1 must precede it due to runtime library [libcv_bridge.so]
+      dir 3 must precede it due to runtime library [libopencv_highgui.so.4.5]
+    dir 1 is [/home/martin/Code/Master/autoCalib_ws/devel/lib]
+    dir 2 is [/opt/ros/noetic/lib]
+    dir 3 is [/home/martin/build/lib]
+      dir 0 must precede it due to runtime library [libopencv_calib3d.so.4.5]
+
+  Some of these libraries may not be found correctly.
+
+
 -- Generating done
 -- Build files have been written to: /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug

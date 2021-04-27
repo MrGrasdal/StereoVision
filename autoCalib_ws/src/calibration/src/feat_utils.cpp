@@ -10,6 +10,7 @@ void FeatureUtils::extractKpts(cv::Mat imgL, cv::Mat imgR, vPts& goodKptsL, vPts
     vKpts kptsL, kptsR;
     vector< DMatch > matches;
 
+
     if (descriptor == "ORB") {
         ROS_INFO("ORB");
         Ptr<ORB> detector = ORB::create();
@@ -17,9 +18,14 @@ void FeatureUtils::extractKpts(cv::Mat imgL, cv::Mat imgR, vPts& goodKptsL, vPts
         detector->detectAndCompute( imgL, noArray(), kptsL, descL );
         detector->detectAndCompute( imgR, noArray(), kptsR, descR );
     }
-    else if (descriptor == "SURF") {
+    else if (descriptor == "SIFT") {
         ROS_INFO("SIFT");
+
         Ptr<SIFT> detector = SIFT::create();
+
+        detector->detectAndCompute( imgL, noArray(), kptsL, descL );
+        detector->detectAndCompute( imgR, noArray(), kptsR, descR );
+
     }
 
 

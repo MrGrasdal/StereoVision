@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\GeographicLib\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\sophus\;CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\cmake\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag_storage\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag_storage\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslz4\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslz4\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_srvs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\topic_tools\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\topic_tools\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\opencv\;CMake Files\..\..\..\opencv\build\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\share\;CMake Files\..\..\..\..\..\usr\local\share\sophus\;CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\GeographicLib\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\cmake\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\noetic\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag_storage\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosbag_storage\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslz4\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roslz4\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_srvs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\topic_tools\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\topic_tools\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\noetic\share\geometry_msgs\cmake\;CMake Files\cmake-build-debug\;CMake Files\cmake-build-debug\catkin\;CMake Files\cmake-build-debug\catkin\catkin_generated\;CMake Files\cmake-build-debug\catkin\catkin_generated\version\;CMake Files\cmake-build-debug\catkin_generated\;CMake Files\cmake-build-debug\catkin_generated\installspace\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/martin/Code/Master/AutoCalibration/cmake-build-debug/gtest/googlemock"/>
@@ -241,17 +241,32 @@
 		<Unit filename="/home/martin/Code/Master/AutoCalibration/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../opencv/build/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opencv\build\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../opencv/build/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opencv\build\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../opencv/build/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\opencv\build\"/>
 		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/share/sophus/cmake/SophusConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/share/sophus/cmake/SophusConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\"/>
+		</Unit>
+		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/share/sophus/cmake/SophusTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\"/>
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/lib/cmake/GeographicLib/geographiclib-config-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\GeographicLib\"/>
@@ -270,24 +285,6 @@
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/lib/cmake/GeographicLib/geographiclib-targets.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\GeographicLib\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/share/sophus/cmake/SophusConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/share/sophus/cmake/SophusConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/local/share/sophus/cmake/SophusTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\share\sophus\cmake\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/lib/cmake/eigen3/Eigen3Config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
-		</Unit>
-		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/lib/cmake/eigen3/Eigen3Targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\"/>
 		</Unit>
 		<Unit filename="/home/martin/Code/Master/AutoCalibration/../../../../../usr/src/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\src\googletest\"/>
