@@ -10,16 +10,21 @@
 
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
-#include <calibration//gnssGGA.h>
+#include <calibration/gnssGGA.h>
 
 #include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <cv_bridge/cv_bridge.h>
 
+//#include <gtsam/nonlinear/LevenbergMarquardtParams.h>
+//#include <gtsam/nonlinear/LevenbergMarquardtOptimizer.h>
+
 #include <string.h>
 #include <iostream>
 
-#include "../include/feat_utils.h"
+#include "feat_utils.h"
+#include "camera.h"
+#include "camModel.h"
 
 using namespace sensor_msgs;
 using namespace message_filters;
@@ -27,40 +32,106 @@ using namespace cv_bridge;
 using namespace std;
 using namespace cv;
 
+class Calibrator {
 
-FeatureUtils _feat;
+public:
+    FeatureUtils _feat;
+
+    Camera camLeft(false);
+    Camera camRight(true);
+
+    int noOfEpochs = 0;
+    int totalMatches = 0;
+    int averageMatches = 0;
+
+    vector<KeyPoint> kptsL, kptsR;
+    Mat descL, descR;
+    vector<DMatch> matches;
+
+    void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
+                       const sensor_msgs::ImageConstPtr &imgR_msg,
+                       const calibration::gnssGGA::ConstPtr &gnss_msg);
+};
 
 
-void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
-                   const sensor_msgs::ImageConstPtr &imgR_msg,
-                   const calibration::gnssGGA::ConstPtr &gnss_msg) {
+void Calibrator::imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
+                               const sensor_msgs::ImageConstPtr &imgR_msg,
+                               const calibration::gnssGGA::ConstPtr &gnss_msg) {
+
 
     double gnss_t = double(gnss_msg->header.stamp.sec) + double(gnss_msg->header.stamp.nsec)*1e-9;
     double imgL_t = double(imgL_msg->header.stamp.sec) + double(imgL_msg->header.stamp.nsec)*1e-9;
 
-    cv::Mat imgL = cv_bridge::toCvCopy(imgL_msg, image_encodings::BGR8)->image;
-    cv::Mat imgR = cv_bridge::toCvCopy(imgR_msg, image_encodings::BGR8)->image;
+    ROS_INFO("%f", imgL_t);
+
+    vector<DMatch> newMatches;
+    Camera newLeft( imgL_t);
+    Camera newRight( imgL_t, right);
+
+    newLeft.img = cv_bridge::toCvCopy(imgL_msg, image_encodings::BGR8)->image;
+    newRight.img = cv_bridge::toCvCopy(imgR_msg, image_encodings::BGR8)->image;
 
     //_feat.saveStereoImage(imgL, imgR, imgL_t);
     //_feat.printStereoImage(imgL, imgR);
 
-    vector<Point2f> kptsL, kptsR;
-    vector<DMatch> matches;
 
-    _feat.extractKpts(imgL, imgR, kptsL, kptsR, matches, "SIFT", true);
+    int firstMatch = 0;
+    int secondMatch = 0;
 
-    int i = 0;
+    _feat.extractFeatures(newLeft, newRight, "SURF");
+
+    _feat.matchFeatures(newLeft, newRight, newMatches,
+                       firstMatch, "BF");
+
+    //_feat.showMatches(newLeft, newRight, newMatches);
+
+    if (noOfEpochs == 0)
+    {
+        ROS_INFO("first");
+    }
+
+    else
+    {
+
+        if ( newLeft.time == camLeft.time ){
+            ROS_INFO("WTF");
+        }
+    }
+        bool enoughMatches = _feat.matchFeatures(camLeft, newLeft, newMatches,
+                            secondMatch, "BF");
+
+        if (enoughMatches) {
+            _feat.showMatches(camLeft, newLeft, newMatches);
+        }
+
+    //Mat F = CameraModel::calcFundamental(cameraLeft, cameraRight);
+
+    //Mat T = CameraModel::triTensor(cameraLeft.P, cameraLeft.P,
+    //                               cameraLeftAhead.P, 1 ,2 , 1);
+
+
+    noOfEpochs++;
+    totalMatches += secondMatch;
+    averageMatches = totalMatches / noOfEpochs;
+
+
+    ROS_INFO("Timedifference %f", newLeft.time - camLeft.time);
+    ROS_INFO("First matches: \t\t%i", firstMatch);
+    ROS_INFO("Second matches: \t%i", secondMatch);
+    ROS_INFO("Average matches: \t%i \n\n", averageMatches);
+
+    camLeft = newLeft;
+    camRight = newRight;
+
+    matches = newMatches;
+
+
 }
 
 
 int main(int argc, char **argv) {
 
     ROS_INFO("Starting node");
-
-    cout << "OpenCV version : " << CV_VERSION << endl;
-    cout << "Major version : " << CV_MAJOR_VERSION << endl;
-    cout << "Minor version : " << CV_MINOR_VERSION << endl;
-    cout << "Subminor version : " << CV_SUBMINOR_VERSION << endl;
 
     ros::init(argc, argv, "autoCalibration");
     ros::NodeHandle nh;
@@ -73,7 +144,8 @@ int main(int argc, char **argv) {
     //typedef sync_policies::ApproximateTime<Image, Image> MySyncPolicy;
 
     Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), imgL_sub, imgR_sub, gnss_sub);
-    sync.registerCallback(boost::bind(&imageCallback, _1, _2, _3));
+    sync.registerCallback(boost::bind(&Calibrator::imageCallback, _1, _2, _3));
 
     ros::spin();
 }
+

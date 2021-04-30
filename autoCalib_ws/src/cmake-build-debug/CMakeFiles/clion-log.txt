@@ -1,7 +1,7 @@
 /snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCATKIN_DEVEL_PREFIX:PATH=~/Code/Master/autoCalib_ws/devel -G "CodeBlocks - Unix Makefiles" /home/martin/Code/Master/autoCalib_ws/src
 -- Using CATKIN_DEVEL_PREFIX: /home/martin/Code/Master/autoCalib_ws/devel
--- Using CMAKE_PREFIX_PATH: /opt/ros/noetic
--- This workspace overlays: /opt/ros/noetic
+-- Using CMAKE_PREFIX_PATH: /home/martin/Code/Master/autoCalib_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/martin/Code/Master/autoCalib_ws/devel;/opt/ros/noetic
 -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
 -- Using PYTHON_EXECUTABLE: /usr/bin/python3
 -- Using Debian Python package layout
@@ -55,18 +55,20 @@ CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (c
 -- +++ processing catkin package: 'cv_bridge'
 -- ==> add_subdirectory(cv_bridge)
 -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found version "3.8.5") 
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: python 
 -- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4.5.0") 
 -- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4") found components: opencv_core opencv_imgproc opencv_imgcodecs 
 -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.5", minimum required is "3.8") 
 -- +++ processing catkin package: 'calibration'
 -- ==> add_subdirectory(calibration)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- Found OpenCV: /home/martin/build (found suitable version "4.5.2", minimum required is "4.5.0") 
 OpenCV version: 4.5.2
--- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-OpenCV version: 4.5.2
+-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found suitable version "1.71.0", minimum required is "1.58") found components: serialization system filesystem thread program_options date_time timer chrono regex 
+-- GTSAM include directory:  /usr/local/lib/cmake/GTSAM/../../../include
 -- calibration: 2 messages, 0 services
 -- Configuring done
-CMake Warning at calibration/CMakeLists.txt:260 (add_executable):
+CMake Warning at calibration/CMakeLists.txt:265 (add_executable):
   Cannot generate a safe runtime search path for target main_calib because
   there is a cycle in the constraint graph:
 

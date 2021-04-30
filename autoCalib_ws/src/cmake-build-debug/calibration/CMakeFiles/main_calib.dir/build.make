@@ -102,16 +102,46 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_calib.dir/src/feat_utils.cpp.s"
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Code/Master/autoCalib_ws/src/calibration/src/feat_utils.cpp -o CMakeFiles/main_calib.dir/src/feat_utils.cpp.s
 
+calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.o: calibration/CMakeFiles/main_calib.dir/flags.make
+calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.o: ../calibration/src/camModel.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.o"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_calib.dir/src/camModel.cpp.o -c /home/martin/Code/Master/autoCalib_ws/src/calibration/src/camModel.cpp
+
+calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_calib.dir/src/camModel.cpp.i"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/Code/Master/autoCalib_ws/src/calibration/src/camModel.cpp > CMakeFiles/main_calib.dir/src/camModel.cpp.i
+
+calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_calib.dir/src/camModel.cpp.s"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Code/Master/autoCalib_ws/src/calibration/src/camModel.cpp -o CMakeFiles/main_calib.dir/src/camModel.cpp.s
+
+calibration/CMakeFiles/main_calib.dir/src/camera.cpp.o: calibration/CMakeFiles/main_calib.dir/flags.make
+calibration/CMakeFiles/main_calib.dir/src/camera.cpp.o: ../calibration/src/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object calibration/CMakeFiles/main_calib.dir/src/camera.cpp.o"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main_calib.dir/src/camera.cpp.o -c /home/martin/Code/Master/autoCalib_ws/src/calibration/src/camera.cpp
+
+calibration/CMakeFiles/main_calib.dir/src/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main_calib.dir/src/camera.cpp.i"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/martin/Code/Master/autoCalib_ws/src/calibration/src/camera.cpp > CMakeFiles/main_calib.dir/src/camera.cpp.i
+
+calibration/CMakeFiles/main_calib.dir/src/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main_calib.dir/src/camera.cpp.s"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/martin/Code/Master/autoCalib_ws/src/calibration/src/camera.cpp -o CMakeFiles/main_calib.dir/src/camera.cpp.s
+
 # Object files for target main_calib
 main_calib_OBJECTS = \
 "CMakeFiles/main_calib.dir/src/main_calib.cpp.o" \
-"CMakeFiles/main_calib.dir/src/feat_utils.cpp.o"
+"CMakeFiles/main_calib.dir/src/feat_utils.cpp.o" \
+"CMakeFiles/main_calib.dir/src/camModel.cpp.o" \
+"CMakeFiles/main_calib.dir/src/camera.cpp.o"
 
 # External object files for target main_calib
 main_calib_EXTERNAL_OBJECTS =
 
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.o
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: calibration/CMakeFiles/main_calib.dir/src/camera.cpp.o
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: calibration/CMakeFiles/main_calib.dir/build.make
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/Code/Master/autoCalib_ws/devel/lib/libcv_bridge.so
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/local/lib/libopencv_calib3d.so.4.5.2
@@ -199,6 +229,7 @@ main_calib_EXTERNAL_OBJECTS =
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_highgui.so.4.5.2
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_xfeatures2d.so.4.5.2
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/local/lib/libgtsam.so.4.1.0
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_gapi.so.4.5.2
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_stitching.so.4.5.2
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_alphamat.so.4.5.2
@@ -264,8 +295,18 @@ main_calib_EXTERNAL_OBJECTS =
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_imgproc.so.4.5.2
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_flann.so.4.5.2
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /home/martin/build/lib/libopencv_core.so.4.5.2
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_timer.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: /usr/local/lib/libmetis-gtsam.so
 /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib: calibration/CMakeFiles/main_calib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/martin/Code/Master/autoCalib_ws/devel/lib/calibration/main_calib"
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main_calib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

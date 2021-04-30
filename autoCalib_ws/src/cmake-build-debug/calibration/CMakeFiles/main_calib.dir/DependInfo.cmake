@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/src/camModel.cpp" "/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.o"
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/src/camera.cpp" "/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration/CMakeFiles/main_calib.dir/src/camera.cpp.o"
   "/home/martin/Code/Master/autoCalib_ws/src/calibration/src/feat_utils.cpp" "/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o"
   "/home/martin/Code/Master/autoCalib_ws/src/calibration/src/main_calib.cpp" "/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o"
   )
@@ -11,6 +13,16 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
+  "BOOST_ALL_NO_LIB"
+  "BOOST_ATOMIC_DYN_LINK"
+  "BOOST_CHRONO_DYN_LINK"
+  "BOOST_DATE_TIME_DYN_LINK"
+  "BOOST_FILESYSTEM_DYN_LINK"
+  "BOOST_REGEX_DYN_LINK"
+  "BOOST_SERIALIZATION_DYN_LINK"
+  "BOOST_SYSTEM_DYN_LINK"
+  "BOOST_THREAD_DYN_LINK"
+  "BOOST_TIMER_DYN_LINK"
   "ROSCONSOLE_BACKEND_LOG4CXX"
   "ROS_BUILD_SHARED_LIBS=1"
   "ROS_PACKAGE_NAME=\"calibration\""
@@ -83,6 +95,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/martin/opencv_contrib-master/modules/superres/include"
   "/home/martin/opencv_contrib-master/modules/tracking/include"
   "/home/martin/opencv_contrib-master/modules/stereo/include"
+  "/usr/local/include/gtsam/3rdparty/metis"
+  "/usr/local/include/gtsam/3rdparty/SuiteSparse_config"
+  "/usr/local/include/gtsam/3rdparty/CCOLAMD"
+  "/usr/local/include/gtsam/3rdparty/Eigen"
   )
 
 # Targets to which this target links.

@@ -6,6 +6,56 @@
 
 #IncludeRegexTransform: 
 
+../calibration/include/camModel.h
+string.h
+-
+iostream
+-
+vector
+-
+opencv2/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+cv_bridge/cv_bridge.h
+-
+
+../calibration/include/camera.h
+string.h
+-
+iostream
+-
+vector
+-
+opencv2/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+cv_bridge/cv_bridge.h
+-
+camModel.h
+../calibration/include/camModel.h
+
+../calibration/include/feat_utils.h
+opencv2/core.hpp
+-
+opencv2/highgui/highgui.hpp
+-
+opencv2/features2d.hpp
+-
+opencv2/xfeatures2d/nonfree.hpp
+-
+opencv2/calib3d.hpp
+-
+string
+-
+iostream
+-
+ros/ros.h
+-
+camera.h
+../calibration/include/camera.h
+
 /home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA.h
 string
 -
@@ -42,22 +92,6 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/martin/Code/Master/autoCalib_ws/src/calibration/include/feat_utils.h
-opencv2/core.hpp
--
-opencv2/highgui/highgui.hpp
--
-opencv2/features2d.hpp
--
-opencv2/calib3d.hpp
--
-string
--
-iostream
--
-ros/ros.h
--
-
 /home/martin/Code/Master/autoCalib_ws/src/calibration/src/main_calib.cpp
 message_filters/subscriber.h
 -
@@ -81,8 +115,12 @@ string.h
 -
 iostream
 -
-../include/feat_utils.h
-/home/martin/Code/Master/autoCalib_ws/src/calibration/include/feat_utils.h
+feat_utils.h
+/home/martin/Code/Master/autoCalib_ws/src/calibration/src/feat_utils.h
+camera.h
+/home/martin/Code/Master/autoCalib_ws/src/calibration/src/camera.h
+camModel.h
+/home/martin/Code/Master/autoCalib_ws/src/calibration/src/camModel.h
 
 /home/martin/build/cv_cpu_config.h
 
@@ -1405,4 +1443,8 @@ opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/videoio.hpp
 opencv2/core.hpp
 /usr/local/include/opencv4/opencv2/opencv2/core.hpp
+
+/usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp
+opencv2/features2d.hpp
+/usr/local/include/opencv4/opencv2/xfeatures2d/opencv2/features2d.hpp
 

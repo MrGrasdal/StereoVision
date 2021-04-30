@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/autoCalib_ws.iml" filepath="$PROJECT_DIR$/.idea/autoCalib_ws.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/autoCalib_ws2.iml" filepath="$PROJECT_DIR$/.idea/autoCalib_ws2.iml" />
     </modules>
   </component>
 </project>

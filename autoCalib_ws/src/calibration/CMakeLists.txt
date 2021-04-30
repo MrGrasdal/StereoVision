@@ -9,13 +9,6 @@ set(cv_bridge_DIR /usr/local/share/cv_bridge/cmake)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(OpenCV 4.5.0 REQUIRED
-        NO_MODULE #Should be optional, tells CMake to use config mode
-        PATHS /usr/local # Tells CMake to look here
-        NO_DEFAULT_PATH #and don't look anywhere else)
-        )
-
-message("OpenCV version: ${OpenCV_VERSION}")
 
 
 find_package(catkin REQUIRED COMPONENTS
@@ -27,8 +20,18 @@ find_package(catkin REQUIRED COMPONENTS
         message_generation
         )
 
+find_package(OpenCV 4.5.0 REQUIRED
+        NO_MODULE #Should be optional, tells CMake to use config mode
+        PATHS /usr/local # Tells CMake to look here
+        NO_DEFAULT_PATH #and don't look anywhere else)
+        )
 
 message("OpenCV version: ${OpenCV_VERSION}")
+
+
+find_package(GTSAM REQUIRED
+        GTSAMCMakeTools)
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -132,6 +135,7 @@ set(OpenCV_LIBS
         opencv_imgcodecs
         opencv_features2d
         opencv_xfeatures2d
+
         )
 
 
@@ -165,6 +169,7 @@ catkin_package(
 include_directories(
         ${catkin_INCLUDE_DIRS}
         ${OpenCV_INCLUDE_DIRS}
+        ${GTSAM_INCLUDE_DIR}
         include
 
 
@@ -257,8 +262,8 @@ link_directories(${OpenCV_LIB_DIR})
 # catkin_add_nosetests(test)
 
 
-add_executable(main_calib src/main_calib.cpp src/feat_utils.cpp)
-target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBS})
+add_executable(main_calib src/main_calib.cpp src/feat_utils.cpp src/camModel.cpp src/camera.cpp include/camera.h)
+target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBS} gtsam)
 add_dependencies(main_calib calibration_generate_messages_cpp)
 
 
