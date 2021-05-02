@@ -1,8 +1,0 @@
-prefix=/home/stereo/newspin_ws/devel/.private/camera_calibration
-
-Name: camera_calibration
-Description: Description of camera_calibration
-Version: 1.15.3
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

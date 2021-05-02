@@ -85,6 +85,7 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: ../calibration/inclu
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: ../calibration/include/feat_utils.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: ../calibration/src/feat_utils.cpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /home/martin/build/cv_cpu_config.h
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/cv_bridge/cv_bridge.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/assert.h
@@ -103,6 +104,7 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/incl
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/message.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/message_event.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/message_forward.h
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/message_operations.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/message_traits.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/names.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/node_handle.h
@@ -140,6 +142,10 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/incl
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/sensor_msgs/CompressedImage.h
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/sensor_msgs/Image.h
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/sensor_msgs/image_encodings.h
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/calib3d.hpp
@@ -148,6 +154,8 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/o
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/base.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/check.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/core.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/core_c.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/cv_cpu_helper.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/cvdef.h
@@ -168,6 +176,7 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/o
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/saturate.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/traits.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/types.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/types_c.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/utility.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
@@ -181,6 +190,10 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/o
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/highgui.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/highgui/highgui.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/imgcodecs.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/imgproc.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/types_c.h
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/opencv_modules.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: /usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp
@@ -192,6 +205,7 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /home/martin/Code/Ma
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA_status.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: ../calibration/src/main_calib.cpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /home/martin/build/cv_cpu_config.h
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/cv_bridge/cv_bridge.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/message_filters/connection.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/message_filters/macros.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/message_filters/null_types.h
@@ -260,8 +274,10 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/incl
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/sensor_msgs/CameraInfo.h
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/sensor_msgs/CompressedImage.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/sensor_msgs/Image.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/sensor_msgs/image_encodings.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/std_msgs/Header.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
@@ -271,6 +287,8 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/o
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/base.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/bufferpool.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/check.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/core.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/core_c.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/cv_cpu_helper.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/cvdef.h
@@ -291,6 +309,7 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/o
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/saturate.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/traits.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/types.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/types_c.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/utility.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
@@ -304,6 +323,10 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/o
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/highgui.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/highgui/highgui.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/imgcodecs.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/imgproc.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp
+calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/imgproc/types_c.h
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/opencv_modules.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: /usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp

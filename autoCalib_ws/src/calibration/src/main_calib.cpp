@@ -32,119 +32,150 @@ using namespace cv_bridge;
 using namespace std;
 using namespace cv;
 
-class Calibrator {
+class CalibNode {
 
-public:
-    FeatureUtils _feat;
+    public:
+        CalibNode();
 
-    Camera camLeft(false);
-    Camera camRight(true);
+        void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
+                           const sensor_msgs::ImageConstPtr &imgR_msg,
+                           const calibration::gnssGGA::ConstPtr &gnss_msg);
+    private:
 
-    int noOfEpochs = 0;
-    int totalMatches = 0;
-    int averageMatches = 0;
+        Camera camLeft;
+        Camera camRight;
+        vector<DMatch> currMatches;
 
-    vector<KeyPoint> kptsL, kptsR;
-    Mat descL, descR;
-    vector<DMatch> matches;
+        int noOfEpochs;
+        int totalMatches;
+        int averageMatches;
 
-    void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
-                       const sensor_msgs::ImageConstPtr &imgR_msg,
-                       const calibration::gnssGGA::ConstPtr &gnss_msg);
+        FeatureUtils _feat;
+
+        ros::NodeHandle nh;
+
+        message_filters::Subscriber<Image> imgL_sub;
+        message_filters::Subscriber<Image> imgR_sub;
+        message_filters::Subscriber<calibration::gnssGGA> gnss_sub;
+
+        typedef sync_policies::ApproximateTime<Image, Image, calibration::gnssGGA> MySyncPolicy;
+        typedef Synchronizer<MySyncPolicy> Sync;
+        boost::shared_ptr<Sync> sync;
+
 };
 
 
-void Calibrator::imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
-                               const sensor_msgs::ImageConstPtr &imgR_msg,
-                               const calibration::gnssGGA::ConstPtr &gnss_msg) {
+CalibNode::CalibNode() {
+
+    camLeft.initCamera();
+    camRight.initCamera(true);
+
+    noOfEpochs = 0;
+    totalMatches = 0;
+    averageMatches = 0;
+
+    imgL_sub.subscribe(nh, "/camera_array/left/image_raw", 1);
+    imgR_sub.subscribe(nh, "/camera_array/right/image_raw", 1);
+    gnss_sub.subscribe(nh, "/vectorVS330/fix", 1);
+    sync.reset(new Sync(MySyncPolicy(10), imgL_sub, imgR_sub, gnss_sub));
+    sync->registerCallback(boost::bind(&CalibNode::imageCallback, this, _1, _2, _3));
+}
 
 
-    double gnss_t = double(gnss_msg->header.stamp.sec) + double(gnss_msg->header.stamp.nsec)*1e-9;
-    double imgL_t = double(imgL_msg->header.stamp.sec) + double(imgL_msg->header.stamp.nsec)*1e-9;
+void CalibNode::imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
+                              const sensor_msgs::ImageConstPtr &imgR_msg,
+                              const calibration::gnssGGA::ConstPtr &gnss_msg) {
+
+
+    double gnss_t = double(gnss_msg->header.stamp.sec) + double(gnss_msg->header.stamp.nsec) * 1e-9;
+    double imgL_t = double(imgL_msg->header.stamp.sec) + double(imgL_msg->header.stamp.nsec) * 1e-9;
+
+    if ( imgL_t - camLeft.time < 1) {
+        return;
+    }
 
     ROS_INFO("%f", imgL_t);
 
-    vector<DMatch> newMatches;
-    Camera newLeft( imgL_t);
-    Camera newRight( imgL_t, right);
+    vector<DMatch> newMatches, epochMatches;
+    Camera newLeft(imgL_t);
+    Camera newRight(imgL_t, right);
 
-    newLeft.img = cv_bridge::toCvCopy(imgL_msg, image_encodings::BGR8)->image;
-    newRight.img = cv_bridge::toCvCopy(imgR_msg, image_encodings::BGR8)->image;
+    newLeft.img = cv_bridge::toCvCopy(imgL_msg, image_encodings::MONO8)->image;
+    newRight.img = cv_bridge::toCvCopy(imgR_msg, image_encodings::MONO8)->image;
 
     //_feat.saveStereoImage(imgL, imgR, imgL_t);
     //_feat.printStereoImage(imgL, imgR);
 
-
     int firstMatch = 0;
     int secondMatch = 0;
+    int noOf3pMatch = 0;
 
-    _feat.extractFeatures(newLeft, newRight, "SURF");
+    _feat.extractFeatures(newLeft, newRight, "SIFT");
 
     _feat.matchFeatures(newLeft, newRight, newMatches,
-                       firstMatch, "BF");
+                                    firstMatch, "FLANN");
 
     //_feat.showMatches(newLeft, newRight, newMatches);
 
-    if (noOfEpochs == 0)
-    {
+
+    if (noOfEpochs == 0) {
         ROS_INFO("first");
+
     }
+    else {
+        _feat.matchFeatures(newLeft, camLeft, epochMatches,
+                            secondMatch, "FLANN", true);
 
-    else
-    {
+        //bool enoughMatches = _feat.epochMatching(camLeft, newLeft, epochMatches,
+        //                                         secondMatch, "FLANN");
 
-        if ( newLeft.time == camLeft.time ){
-            ROS_INFO("WTF");
-        }
+
+
+        _feat.find3pmatch(newLeft, camLeft, camRight,
+                          epochMatches, currMatches, noOf3pMatch);
+
+        //_feat.showMatches(newLeft, camLeft, epochMatches);
+        //_feat.showMatches(camLeft, camRight, currMatches);
+
+        _feat.draw3pMatches(newLeft, camLeft, camRight);
+
+
+        //if (enoughMatches) {
+            //_feat.showMatches(camLeft, newLeft, epochMatches, true);
+
+            //Mat F = CameraModel::calcFundamental(cameraLeft, cameraRight);
+            //Mat T = CameraModel::triTensor(cameraLeft.P, cameraLeft.P,
+            //                               cameraLeftAhead.P, 1 ,2 , 1);
+
+        //}
+
     }
-        bool enoughMatches = _feat.matchFeatures(camLeft, newLeft, newMatches,
-                            secondMatch, "BF");
-
-        if (enoughMatches) {
-            _feat.showMatches(camLeft, newLeft, newMatches);
-        }
-
-    //Mat F = CameraModel::calcFundamental(cameraLeft, cameraRight);
-
-    //Mat T = CameraModel::triTensor(cameraLeft.P, cameraLeft.P,
-    //                               cameraLeftAhead.P, 1 ,2 , 1);
-
 
     noOfEpochs++;
-    totalMatches += secondMatch;
+    totalMatches += noOf3pMatch;
     averageMatches = totalMatches / noOfEpochs;
-
 
     ROS_INFO("Timedifference %f", newLeft.time - camLeft.time);
     ROS_INFO("First matches: \t\t%i", firstMatch);
     ROS_INFO("Second matches: \t%i", secondMatch);
-    ROS_INFO("Average matches: \t%i \n\n", averageMatches);
+    ROS_INFO("3 point matches: \t%i", noOf3pMatch);
+    ROS_INFO("Average matches: \t%i \n", averageMatches);
 
+    currMatches = newMatches;
     camLeft = newLeft;
     camRight = newRight;
-
-    matches = newMatches;
-
-
 }
 
 
 int main(int argc, char **argv) {
 
+    FeatureUtils _feat;
+
     ROS_INFO("Starting node");
 
     ros::init(argc, argv, "autoCalibration");
-    ros::NodeHandle nh;
 
-    message_filters::Subscriber<Image> imgL_sub(nh, "/camera_array/left/image_raw", 1);
-    message_filters::Subscriber<Image> imgR_sub(nh, "/camera_array/right/image_raw", 1);
-    message_filters::Subscriber<calibration::gnssGGA> gnss_sub(nh, "/vectorVS330/fix", 1);
-
-    typedef sync_policies::ApproximateTime<Image, Image, calibration::gnssGGA> MySyncPolicy;
-    //typedef sync_policies::ApproximateTime<Image, Image> MySyncPolicy;
-
-    Synchronizer<MySyncPolicy> sync(MySyncPolicy(10), imgL_sub, imgR_sub, gnss_sub);
-    sync.registerCallback(boost::bind(&Calibrator::imageCallback, _1, _2, _3));
+    CalibNode calibNode;
 
     ros::spin();
 }

@@ -137,6 +137,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/martin/Code/Master/autoCalib_ws/build/gtest/cmake_install.cmake")
   include("/home/martin/Code/Master/autoCalib_ws/build/speak_listen/cmake_install.cmake")
+  include("/home/martin/Code/Master/autoCalib_ws/build/cv_bridge/cmake_install.cmake")
   include("/home/martin/Code/Master/autoCalib_ws/build/calibration/cmake_install.cmake")
 
 endif()

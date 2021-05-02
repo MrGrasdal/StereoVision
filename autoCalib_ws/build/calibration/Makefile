@@ -367,6 +367,54 @@ calibration_genpy/fast:
 	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_genpy.dir/build.make calibration/CMakeFiles/calibration_genpy.dir/build
 .PHONY : calibration_genpy/fast
 
+src/camModel.o: src/camModel.cpp.o
+.PHONY : src/camModel.o
+
+# target to build an object file
+src/camModel.cpp.o:
+	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.o
+.PHONY : src/camModel.cpp.o
+
+src/camModel.i: src/camModel.cpp.i
+.PHONY : src/camModel.i
+
+# target to preprocess a source file
+src/camModel.cpp.i:
+	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.i
+.PHONY : src/camModel.cpp.i
+
+src/camModel.s: src/camModel.cpp.s
+.PHONY : src/camModel.s
+
+# target to generate assembly for a file
+src/camModel.cpp.s:
+	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/camModel.cpp.s
+.PHONY : src/camModel.cpp.s
+
+src/camera.o: src/camera.cpp.o
+.PHONY : src/camera.o
+
+# target to build an object file
+src/camera.cpp.o:
+	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/camera.cpp.o
+.PHONY : src/camera.cpp.o
+
+src/camera.i: src/camera.cpp.i
+.PHONY : src/camera.i
+
+# target to preprocess a source file
+src/camera.cpp.i:
+	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/camera.cpp.i
+.PHONY : src/camera.cpp.i
+
+src/camera.s: src/camera.cpp.s
+.PHONY : src/camera.s
+
+# target to generate assembly for a file
+src/camera.cpp.s:
+	cd /home/martin/Code/Master/autoCalib_ws/build && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/camera.cpp.s
+.PHONY : src/camera.cpp.s
+
 src/feat_utils.o: src/feat_utils.cpp.o
 .PHONY : src/feat_utils.o
 
@@ -442,6 +490,12 @@ help:
 	@echo "... calibration_gennodejs"
 	@echo "... calibration_genpy"
 	@echo "... main_calib"
+	@echo "... src/camModel.o"
+	@echo "... src/camModel.i"
+	@echo "... src/camModel.s"
+	@echo "... src/camera.o"
+	@echo "... src/camera.i"
+	@echo "... src/camera.s"
 	@echo "... src/feat_utils.o"
 	@echo "... src/feat_utils.i"
 	@echo "... src/feat_utils.s"

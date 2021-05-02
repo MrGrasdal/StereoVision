@@ -1,32 +1,25 @@
 calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /home/martin/Code/Master/autoCalib_ws/src/calibration/src/feat_utils.cpp \
  /usr/include/stdc-predef.h \
- /home/martin/Code/Master/autoCalib_ws/src/calibration/src/../include/feat_utils.h \
- /usr/include/opencv4/opencv2/core.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
- /usr/include/limits.h \
- /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/feat_utils.h \
+ /usr/local/include/opencv4/opencv2/core.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/core/version.hpp \
+ /usr/include/c++/9/limits \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
+ /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/opencv4/opencv2/core/hal/interface.h \
- /usr/include/c++/9/cstddef \
- /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
- /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/cpu_defines.h \
+ /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/include/c++/9/cstddef \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
  /usr/include/c++/9/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -34,7 +27,7 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
@@ -67,12 +60,72 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/c++/9/bits/std_abs.h /usr/include/c++/9/array \
- /usr/include/c++/9/utility /usr/include/c++/9/bits/stl_relops.h \
- /usr/include/c++/9/bits/stl_pair.h /usr/include/c++/9/bits/move.h \
- /usr/include/c++/9/bits/concept_check.h /usr/include/c++/9/type_traits \
- /usr/include/c++/9/initializer_list /usr/include/c++/9/stdexcept \
- /usr/include/c++/9/exception /usr/include/c++/9/bits/exception.h \
+ /usr/include/c++/9/bits/std_abs.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/immintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/pmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/tmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/smmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/popcntintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/wmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/fxsrintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsaveintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsaveoptintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsavesintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsavecintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512fintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512erintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512pfintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512cdintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512bwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512dqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlbwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vldqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmavlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmiintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmivlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx5124fmapsintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx5124vnniwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmi2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmi2vlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnniintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnnivlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqvlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512bitalgintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/shaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/lzcntintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/bmiintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/bmi2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/fmaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/f16cintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/rtmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xtestintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/cetintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/gfniintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/vaesintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/vpclmulqdqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/movdirintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/sgxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/pconfigintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/waitpkgintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/cldemoteintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/rdseedintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/prfchwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/adxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/clwbintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/clflushoptintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/wbnoinvdintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/pkuintrin.h \
+ /usr/include/c++/9/array /usr/include/c++/9/utility \
+ /usr/include/c++/9/bits/stl_relops.h /usr/include/c++/9/bits/stl_pair.h \
+ /usr/include/c++/9/bits/move.h /usr/include/c++/9/bits/concept_check.h \
+ /usr/include/c++/9/type_traits /usr/include/c++/9/initializer_list \
+ /usr/include/c++/9/stdexcept /usr/include/c++/9/exception \
+ /usr/include/c++/9/bits/exception.h \
  /usr/include/c++/9/bits/exception_ptr.h \
  /usr/include/c++/9/bits/exception_defines.h \
  /usr/include/c++/9/bits/cxxabi_init_exception.h \
@@ -142,18 +195,26 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/9/bits/functional_hash.h \
  /usr/include/c++/9/bits/basic_string.tcc \
- /usr/include/opencv4/opencv2/core/version.hpp \
- /usr/include/opencv4/opencv2/core/base.hpp \
- /usr/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/include/c++/9/climits /usr/include/c++/9/algorithm \
- /usr/include/c++/9/bits/stl_algo.h \
+ /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/include/c++/9/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/c++/9/algorithm /usr/include/c++/9/bits/stl_algo.h \
  /usr/include/c++/9/bits/algorithmfwd.h \
  /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
  /usr/include/c++/9/bits/stl_construct.h \
- /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
- /usr/include/opencv4/opencv2/core/cvstd.hpp /usr/include/c++/9/cstring \
- /usr/include/string.h /usr/include/strings.h /usr/include/c++/9/cmath \
- /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/c++/9/bits/uniform_int_dist.h \
+ /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/include/c++/9/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/9/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
@@ -162,7 +223,7 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
  /usr/include/c++/9/memory /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
  /usr/include/c++/9/ext/concurrence.h \
@@ -177,23 +238,24 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/c++/9/bits/atomic_base.h \
  /usr/include/c++/9/bits/atomic_lockfree_defines.h \
  /usr/include/c++/9/backward/auto_ptr.h \
- /usr/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/include/opencv4/opencv2/core/vsx_utils.hpp /usr/include/assert.h \
- /usr/include/opencv4/opencv2/core/check.hpp \
- /usr/include/opencv4/opencv2/core/traits.hpp \
- /usr/include/opencv4/opencv2/core/matx.hpp \
- /usr/include/opencv4/opencv2/core/saturate.hpp \
- /usr/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/include/opencv4/opencv2/core/types.hpp /usr/include/c++/9/cfloat \
+ /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/include/assert.h /usr/local/include/opencv4/opencv2/core/check.hpp \
+ /usr/local/include/opencv4/opencv2/core/traits.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.hpp \
+ /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/local/include/opencv4/opencv2/core/types.hpp \
+ /usr/include/c++/9/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
  /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /usr/include/opencv4/opencv2/core/mat.hpp \
- /usr/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/include/opencv4/opencv2/core/persistence.hpp \
- /usr/include/opencv4/opencv2/core/operations.hpp \
- /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.hpp \
+ /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/local/include/opencv4/opencv2/core/operations.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
  /usr/include/c++/9/complex /usr/include/c++/9/sstream \
  /usr/include/c++/9/istream /usr/include/c++/9/ios \
  /usr/include/c++/9/bits/ios_base.h \
@@ -212,27 +274,29 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc /usr/include/c++/9/ostream \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/bits/istream.tcc \
  /usr/include/c++/9/bits/sstream.tcc \
- /usr/include/opencv4/opencv2/core/utility.hpp \
+ /usr/local/include/opencv4/opencv2/core/utility.hpp \
  /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
  /usr/include/c++/9/mutex /usr/include/c++/9/chrono \
  /usr/include/c++/9/ratio /usr/include/c++/9/ctime \
  /usr/include/c++/9/bits/parse_numbers.h \
  /usr/include/c++/9/bits/std_mutex.h \
  /usr/include/c++/9/bits/unique_lock.h \
- /usr/include/opencv4/opencv2/core/optim.hpp \
- /usr/include/opencv4/opencv2/core/ovx.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/opencv4/opencv2/highgui/highgui.hpp \
- /usr/include/opencv4/opencv2/highgui.hpp \
- /usr/include/opencv4/opencv2/imgcodecs.hpp \
- /usr/include/opencv4/opencv2/videoio.hpp \
- /usr/include/opencv4/opencv2/features2d.hpp \
- /usr/include/opencv4/opencv2/flann/miniflann.hpp \
- /usr/include/opencv4/opencv2/flann/defines.h \
- /usr/include/opencv4/opencv2/flann/config.h \
- /usr/include/opencv4/opencv2/calib3d.hpp \
- /usr/include/opencv4/opencv2/core/affine.hpp /usr/include/c++/9/iostream \
- /opt/ros/noetic/include/ros/ros.h /opt/ros/noetic/include/ros/time.h \
+ /usr/local/include/opencv4/opencv2/core/optim.hpp \
+ /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/highgui/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/local/include/opencv4/opencv2/videoio.hpp \
+ /usr/local/include/opencv4/opencv2/features2d.hpp \
+ /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/local/include/opencv4/opencv2/flann/defines.h \
+ /usr/local/include/opencv4/opencv2/flann/config.h \
+ /usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp \
+ /usr/local/include/opencv4/opencv2/calib3d.hpp \
+ /usr/local/include/opencv4/opencv2/core/affine.hpp \
+ /usr/include/c++/9/iostream /opt/ros/noetic/include/ros/ros.h \
+ /opt/ros/noetic/include/ros/time.h \
  /opt/ros/noetic/include/ros/platform.h \
  /opt/ros/noetic/include/ros/exception.h \
  /opt/ros/noetic/include/ros/duration.h /usr/include/c++/9/math.h \
@@ -767,7 +831,6 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /usr/include/boost/thread/pthread/mutex.hpp \
  /usr/include/boost/thread/detail/config.hpp \
  /usr/include/boost/thread/detail/thread_safety.hpp \
- /usr/include/boost/config/auto_link.hpp \
  /usr/include/boost/core/ignore_unused.hpp \
  /usr/include/boost/thread/exceptions.hpp \
  /usr/include/boost/system/system_error.hpp \
@@ -1139,4 +1202,19 @@ calibration/CMakeFiles/main_calib.dir/src/feat_utils.cpp.o: \
  /opt/ros/noetic/include/ros/names.h /opt/ros/noetic/include/ros/master.h \
  /opt/ros/noetic/include/ros/this_node.h \
  /opt/ros/noetic/include/ros/param.h /opt/ros/noetic/include/ros/topic.h \
- /opt/ros/noetic/include/ros/node_handle.h
+ /opt/ros/noetic/include/ros/node_handle.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/camera.h \
+ /usr/local/include/cv_bridge/cv_bridge.h \
+ /opt/ros/noetic/include/sensor_msgs/Image.h \
+ /opt/ros/noetic/include/ros/message_operations.h \
+ /opt/ros/noetic/include/std_msgs/Header.h \
+ /opt/ros/noetic/include/sensor_msgs/CompressedImage.h \
+ /opt/ros/noetic/include/sensor_msgs/image_encodings.h \
+ /usr/local/include/opencv4/opencv2/core/core.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/types_c.h \
+ /usr/local/include/opencv4/opencv2/core/core_c.h \
+ /usr/local/include/opencv4/opencv2/core/types_c.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/camModel.h

@@ -9,7 +9,7 @@ Camera::Camera(double ts, bool right)
     CameraModel newModel(right);
     model = newModel;
 
-    double time = ts;
+    time = ts;
 
 }
 
@@ -18,11 +18,24 @@ Camera::Camera(const Camera& sample)
 
     img = sample.img;
 
-    kpts = sample.kpts;
-    desc = sample.desc;
+    allKpts = sample.allKpts;
+    allDesc = sample.allDesc;
+    currKpts = sample.currKpts;
+    currDesc = sample.currDesc;
+    epochKpts = sample.epochKpts;
+    epochDesc = sample.epochDesc;
 
     model = sample.model;
 
     time = sample.time;
 
 }
+
+void Camera::initCamera(bool rght)
+{
+    CameraModel newModel(right);
+    model = newModel;
+
+    time = 0.0;
+}
+

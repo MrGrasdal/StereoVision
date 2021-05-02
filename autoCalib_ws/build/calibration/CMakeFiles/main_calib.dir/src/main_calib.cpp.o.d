@@ -720,7 +720,6 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /usr/include/boost/thread/pthread/mutex.hpp \
  /usr/include/boost/thread/detail/config.hpp \
  /usr/include/boost/thread/detail/thread_safety.hpp \
- /usr/include/boost/config/auto_link.hpp \
  /usr/include/boost/core/ignore_unused.hpp \
  /usr/include/boost/thread/exceptions.hpp \
  /usr/include/boost/system/system_error.hpp \
@@ -1256,56 +1255,121 @@ calibration/CMakeFiles/main_calib.dir/src/main_calib.cpp.o: \
  /opt/ros/noetic/include/std_msgs/Header.h \
  /opt/ros/noetic/include/sensor_msgs/CameraInfo.h \
  /opt/ros/noetic/include/sensor_msgs/RegionOfInterest.h \
- /home/martin/Code/Master/autoCalib_ws/devel/include/calibration//gnssGGA.h \
+ /home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA.h \
  /home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA_status.h \
- /usr/include/opencv4/opencv2/core.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/opencv4/opencv2/core/hal/interface.h \
- /usr/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
+ /usr/local/include/opencv4/opencv2/core.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/core/version.hpp \
+ /usr/local/include/opencv4/opencv2/core/hal/interface.h \
+ /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
- /usr/include/opencv4/opencv2/core/version.hpp \
- /usr/include/opencv4/opencv2/core/base.hpp \
- /usr/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/include/opencv4/opencv2/core/cvstd.hpp \
- /usr/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /usr/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/include/opencv4/opencv2/core/check.hpp \
- /usr/include/opencv4/opencv2/core/traits.hpp \
- /usr/include/opencv4/opencv2/core/matx.hpp \
- /usr/include/opencv4/opencv2/core/saturate.hpp \
- /usr/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/include/opencv4/opencv2/core/types.hpp \
- /usr/include/opencv4/opencv2/core/mat.hpp \
- /usr/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/include/opencv4/opencv2/core/persistence.hpp \
- /usr/include/opencv4/opencv2/core/operations.hpp \
- /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /usr/include/opencv4/opencv2/core/utility.hpp \
- /usr/include/opencv4/opencv2/core/optim.hpp \
- /usr/include/opencv4/opencv2/core/ovx.hpp \
- /usr/include/opencv4/opencv2/core/cvdef.h \
- /usr/include/opencv4/opencv2/highgui/highgui.hpp \
- /usr/include/opencv4/opencv2/highgui.hpp \
- /usr/include/opencv4/opencv2/imgcodecs.hpp \
- /usr/include/opencv4/opencv2/videoio.hpp \
- /opt/ros/noetic/include/cv_bridge/cv_bridge.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/immintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/pmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/tmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/smmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/popcntintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/wmmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/fxsrintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsaveintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsaveoptintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsavesintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xsavecintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512fintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512erintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512pfintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512cdintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512bwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512dqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vlbwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vldqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512ifmavlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmiintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmivlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx5124fmapsintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx5124vnniwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmi2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vbmi2vlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnniintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vnnivlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512vpopcntdqvlintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/avx512bitalgintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/shaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/lzcntintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/bmiintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/bmi2intrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/fmaintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/f16cintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/rtmintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/xtestintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/cetintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/gfniintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/vaesintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/vpclmulqdqintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/movdirintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/sgxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/pconfigintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/waitpkgintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/cldemoteintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/rdseedintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/prfchwintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/adxintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/clwbintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/clflushoptintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/wbnoinvdintrin.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/pkuintrin.h \
+ /usr/local/include/opencv4/opencv2/core/base.hpp \
+ /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
+ /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
+ /usr/local/include/opencv4/opencv2/core/check.hpp \
+ /usr/local/include/opencv4/opencv2/core/traits.hpp \
+ /usr/local/include/opencv4/opencv2/core/matx.hpp \
+ /usr/local/include/opencv4/opencv2/core/saturate.hpp \
+ /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
+ /usr/local/include/opencv4/opencv2/core/types.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.hpp \
+ /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
+ /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/persistence.hpp \
+ /usr/local/include/opencv4/opencv2/core/operations.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
+ /usr/local/include/opencv4/opencv2/core/utility.hpp \
+ /usr/local/include/opencv4/opencv2/core/optim.hpp \
+ /usr/local/include/opencv4/opencv2/core/ovx.hpp \
+ /usr/local/include/opencv4/opencv2/core/cvdef.h \
+ /usr/local/include/opencv4/opencv2/highgui/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/highgui.hpp \
+ /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
+ /usr/local/include/opencv4/opencv2/videoio.hpp \
+ /usr/local/include/cv_bridge/cv_bridge.h \
  /opt/ros/noetic/include/sensor_msgs/CompressedImage.h \
  /opt/ros/noetic/include/sensor_msgs/image_encodings.h \
- /usr/include/opencv4/opencv2/core/core.hpp \
- /usr/include/opencv4/opencv2/imgproc/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc.hpp \
- /usr/include/opencv4/opencv2/imgproc/types_c.h \
- /usr/include/opencv4/opencv2/core/core_c.h \
- /usr/include/opencv4/opencv2/core/types_c.h \
- /home/martin/Code/Master/autoCalib_ws/src/calibration/src/../include/feat_utils.h \
- /usr/include/opencv4/opencv2/features2d.hpp \
- /usr/include/opencv4/opencv2/flann/miniflann.hpp \
- /usr/include/opencv4/opencv2/flann/defines.h \
- /usr/include/opencv4/opencv2/flann/config.h \
- /usr/include/opencv4/opencv2/calib3d.hpp \
- /usr/include/opencv4/opencv2/core/affine.hpp
+ /usr/local/include/opencv4/opencv2/core/core.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
+ /usr/local/include/opencv4/opencv2/imgproc/types_c.h \
+ /usr/local/include/opencv4/opencv2/core/core_c.h \
+ /usr/local/include/opencv4/opencv2/core/types_c.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/feat_utils.h \
+ /usr/local/include/opencv4/opencv2/features2d.hpp \
+ /usr/local/include/opencv4/opencv2/flann/miniflann.hpp \
+ /usr/local/include/opencv4/opencv2/flann/defines.h \
+ /usr/local/include/opencv4/opencv2/flann/config.h \
+ /usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp \
+ /usr/local/include/opencv4/opencv2/calib3d.hpp \
+ /usr/local/include/opencv4/opencv2/core/affine.hpp \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/camera.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/camModel.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/camera.h \
+ /home/martin/Code/Master/autoCalib_ws/src/calibration/include/camModel.h

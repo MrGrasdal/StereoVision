@@ -22,16 +22,24 @@ class Camera {
     public:
         Mat img;
 
-        vector<KeyPoint> kpts;
-        Mat desc;
+        vector<KeyPoint> allKpts;
+        vector<KeyPoint> currKpts;
+        vector<KeyPoint> epochKpts;
+        Mat allDesc;
+        Mat currDesc;
+        Mat epochDesc;
 
         CameraModel model;
 
         double time;
 
+        Camera() {}
+
         Camera(double time, bool right=false);
 
         Camera(const Camera& sample);
+
+        void initCamera(bool right=false);
 
 };
 

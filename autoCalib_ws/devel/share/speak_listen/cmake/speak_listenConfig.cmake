@@ -74,7 +74,7 @@ if("TRUE" STREQUAL "TRUE")
 else()
   set(speak_listen_SOURCE_PREFIX "")
   set(speak_listen_DEVEL_PREFIX "")
-  set(speak_listen_INSTALL_PREFIX /usr/local)
+  set(speak_listen_INSTALL_PREFIX /home/martin/Code/Master/autoCalib_ws/install)
   set(speak_listen_PREFIX ${speak_listen_INSTALL_PREFIX})
 endif()
 

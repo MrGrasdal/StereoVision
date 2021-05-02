@@ -1,1 +1,0 @@
-/home/stereo/newspin_ws/devel/.private/spinnaker_sdk_camera_driver/share/roseus/ros/spinnaker_sdk_camera_driver/msg/SpinnakerImageNames.l
