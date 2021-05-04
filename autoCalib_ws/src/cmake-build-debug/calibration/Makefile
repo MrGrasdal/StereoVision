@@ -131,17 +131,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -153,6 +142,17 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -217,6 +217,51 @@ calibration_generate_messages_py/fast:
 .PHONY : calibration_generate_messages_py/fast
 
 # Convenience name for target.
+calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule
+.PHONY : calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+calibration_generate_messages_nodejs: calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule
+
+.PHONY : calibration_generate_messages_nodejs
+
+# fast build rule for target.
+calibration_generate_messages_nodejs/fast:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/build.make calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/build
+.PHONY : calibration_generate_messages_nodejs/fast
+
+# Convenience name for target.
+calibration/CMakeFiles/calibration_generate_messages.dir/rule:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_generate_messages.dir/rule
+.PHONY : calibration/CMakeFiles/calibration_generate_messages.dir/rule
+
+# Convenience name for target.
+calibration_generate_messages: calibration/CMakeFiles/calibration_generate_messages.dir/rule
+
+.PHONY : calibration_generate_messages
+
+# fast build rule for target.
+calibration_generate_messages/fast:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages.dir/build.make calibration/CMakeFiles/calibration_generate_messages.dir/build
+.PHONY : calibration_generate_messages/fast
+
+# Convenience name for target.
+calibration/CMakeFiles/calibration_gencpp.dir/rule:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_gencpp.dir/rule
+.PHONY : calibration/CMakeFiles/calibration_gencpp.dir/rule
+
+# Convenience name for target.
+calibration_gencpp: calibration/CMakeFiles/calibration_gencpp.dir/rule
+
+.PHONY : calibration_gencpp
+
+# fast build rule for target.
+calibration_gencpp/fast:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_gencpp.dir/build.make calibration/CMakeFiles/calibration_gencpp.dir/build
+.PHONY : calibration_gencpp/fast
+
+# Convenience name for target.
 calibration/CMakeFiles/main_calib.dir/rule:
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/main_calib.dir/rule
 .PHONY : calibration/CMakeFiles/main_calib.dir/rule
@@ -230,6 +275,21 @@ main_calib: calibration/CMakeFiles/main_calib.dir/rule
 main_calib/fast:
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/build
 .PHONY : main_calib/fast
+
+# Convenience name for target.
+calibration/CMakeFiles/_calibration_generate_messages_check_deps_orientation.dir/rule:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/_calibration_generate_messages_check_deps_orientation.dir/rule
+.PHONY : calibration/CMakeFiles/_calibration_generate_messages_check_deps_orientation.dir/rule
+
+# Convenience name for target.
+_calibration_generate_messages_check_deps_orientation: calibration/CMakeFiles/_calibration_generate_messages_check_deps_orientation.dir/rule
+
+.PHONY : _calibration_generate_messages_check_deps_orientation
+
+# fast build rule for target.
+_calibration_generate_messages_check_deps_orientation/fast:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/_calibration_generate_messages_check_deps_orientation.dir/build.make calibration/CMakeFiles/_calibration_generate_messages_check_deps_orientation.dir/build
+.PHONY : _calibration_generate_messages_check_deps_orientation/fast
 
 # Convenience name for target.
 calibration/CMakeFiles/_calibration_generate_messages_check_deps_gnssGGA.dir/rule:
@@ -322,36 +382,6 @@ calibration_geneus/fast:
 .PHONY : calibration_geneus/fast
 
 # Convenience name for target.
-calibration/CMakeFiles/calibration_generate_messages.dir/rule:
-	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_generate_messages.dir/rule
-.PHONY : calibration/CMakeFiles/calibration_generate_messages.dir/rule
-
-# Convenience name for target.
-calibration_generate_messages: calibration/CMakeFiles/calibration_generate_messages.dir/rule
-
-.PHONY : calibration_generate_messages
-
-# fast build rule for target.
-calibration_generate_messages/fast:
-	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages.dir/build.make calibration/CMakeFiles/calibration_generate_messages.dir/build
-.PHONY : calibration_generate_messages/fast
-
-# Convenience name for target.
-calibration/CMakeFiles/calibration_gencpp.dir/rule:
-	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_gencpp.dir/rule
-.PHONY : calibration/CMakeFiles/calibration_gencpp.dir/rule
-
-# Convenience name for target.
-calibration_gencpp: calibration/CMakeFiles/calibration_gencpp.dir/rule
-
-.PHONY : calibration_gencpp
-
-# fast build rule for target.
-calibration_gencpp/fast:
-	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_gencpp.dir/build.make calibration/CMakeFiles/calibration_gencpp.dir/build
-.PHONY : calibration_gencpp/fast
-
-# Convenience name for target.
 calibration/CMakeFiles/calibration_generate_messages_cpp.dir/rule:
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_generate_messages_cpp.dir/rule
 .PHONY : calibration/CMakeFiles/calibration_generate_messages_cpp.dir/rule
@@ -381,20 +411,32 @@ calibration_generate_messages_lisp/fast:
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages_lisp.dir/build.make calibration/CMakeFiles/calibration_generate_messages_lisp.dir/build
 .PHONY : calibration_generate_messages_lisp/fast
 
-# Convenience name for target.
-calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule:
-	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule
-.PHONY : calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule
+src/EKF.o: src/EKF.cpp.o
 
-# Convenience name for target.
-calibration_generate_messages_nodejs: calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/rule
+.PHONY : src/EKF.o
 
-.PHONY : calibration_generate_messages_nodejs
+# target to build an object file
+src/EKF.cpp.o:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/EKF.cpp.o
+.PHONY : src/EKF.cpp.o
 
-# fast build rule for target.
-calibration_generate_messages_nodejs/fast:
-	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/build.make calibration/CMakeFiles/calibration_generate_messages_nodejs.dir/build
-.PHONY : calibration_generate_messages_nodejs/fast
+src/EKF.i: src/EKF.cpp.i
+
+.PHONY : src/EKF.i
+
+# target to preprocess a source file
+src/EKF.cpp.i:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/EKF.cpp.i
+.PHONY : src/EKF.cpp.i
+
+src/EKF.s: src/EKF.cpp.s
+
+.PHONY : src/EKF.s
+
+# target to generate assembly for a file
+src/EKF.cpp.s:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/src/EKF.cpp.s
+.PHONY : src/EKF.cpp.s
 
 src/camModel.o: src/camModel.cpp.o
 
@@ -519,6 +561,7 @@ help:
 	@echo "... test"
 	@echo "... _calibration_generate_messages_check_deps_gnssGGA"
 	@echo "... _calibration_generate_messages_check_deps_gnssGGA_status"
+	@echo "... _calibration_generate_messages_check_deps_orientation"
 	@echo "... calibration_gencpp"
 	@echo "... calibration_generate_messages"
 	@echo "... calibration_generate_messages_cpp"
@@ -531,6 +574,9 @@ help:
 	@echo "... calibration_gennodejs"
 	@echo "... calibration_genpy"
 	@echo "... main_calib"
+	@echo "... src/EKF.o"
+	@echo "... src/EKF.i"
+	@echo "... src/EKF.s"
 	@echo "... src/camModel.o"
 	@echo "... src/camModel.i"
 	@echo "... src/camModel.s"

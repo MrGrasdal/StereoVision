@@ -74,6 +74,7 @@ include calibration/CMakeFiles/calibration_generate_messages_lisp.dir/progress.m
 
 calibration/CMakeFiles/calibration_generate_messages_lisp: /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/gnssGGA_status.lisp
 calibration/CMakeFiles/calibration_generate_messages_lisp: /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/gnssGGA.lisp
+calibration/CMakeFiles/calibration_generate_messages_lisp: /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/orientation.lisp
 
 
 /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/gnssGGA_status.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -88,8 +89,15 @@ calibration/CMakeFiles/calibration_generate_messages_lisp: /home/martin/Code/Mas
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from calibration/gnssGGA.msg"
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg -Icalibration:/home/martin/Code/Master/autoCalib_ws/src/calibration/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p calibration -o /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg
 
+/home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/orientation.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/orientation.lisp: ../calibration/msg/orientation.msg
+/home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/orientation.lisp: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from calibration/orientation.msg"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg -Icalibration:/home/martin/Code/Master/autoCalib_ws/src/calibration/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p calibration -o /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg
+
 calibration_generate_messages_lisp: /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/gnssGGA.lisp
 calibration_generate_messages_lisp: /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/gnssGGA_status.lisp
+calibration_generate_messages_lisp: /home/martin/Code/Master/autoCalib_ws/devel/share/common-lisp/ros/calibration/msg/orientation.lisp
 calibration_generate_messages_lisp: calibration/CMakeFiles/calibration_generate_messages_lisp
 calibration_generate_messages_lisp: calibration/CMakeFiles/calibration_generate_messages_lisp.dir/build.make
 

@@ -11,6 +11,7 @@
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/CameraInfo.h>
 #include <calibration/gnssGGA.h>
+#include <calibration/orientation.h>
 
 #include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -21,10 +22,12 @@
 
 #include <string.h>
 #include <iostream>
+#include "Eigen/Dense"
 
 #include "feat_utils.h"
 #include "camera.h"
 #include "camModel.h"
+#include "EKF.h"
 
 using namespace sensor_msgs;
 using namespace message_filters;
@@ -39,12 +42,18 @@ class CalibNode {
 
         void imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
                            const sensor_msgs::ImageConstPtr &imgR_msg,
-                           const calibration::gnssGGA::ConstPtr &gnss_msg);
+                           const calibration::gnssGGA::ConstPtr &gnss_msg,
+                           const calibration::orientation::ConstPtr &att_msg);
     private:
+
+        EKF filter;
 
         Camera camLeft;
         Camera camRight;
         vector<DMatch> currMatches;
+
+        String descriptor = "SIFT";
+        String matcher = "FLANN";
 
         int noOfEpochs;
         int totalMatches;
@@ -57,8 +66,9 @@ class CalibNode {
         message_filters::Subscriber<Image> imgL_sub;
         message_filters::Subscriber<Image> imgR_sub;
         message_filters::Subscriber<calibration::gnssGGA> gnss_sub;
+        message_filters::Subscriber<calibration::orientation> att_sub;
 
-        typedef sync_policies::ApproximateTime<Image, Image, calibration::gnssGGA> MySyncPolicy;
+        typedef sync_policies::ApproximateTime<Image, Image,calibration::gnssGGA, calibration::orientation> MySyncPolicy;
         typedef Synchronizer<MySyncPolicy> Sync;
         boost::shared_ptr<Sync> sync;
 
@@ -69,6 +79,7 @@ CalibNode::CalibNode() {
 
     camLeft.initCamera();
     camRight.initCamera(true);
+    filter.Init(camRight);
 
     noOfEpochs = 0;
     totalMatches = 0;
@@ -77,28 +88,33 @@ CalibNode::CalibNode() {
     imgL_sub.subscribe(nh, "/camera_array/left/image_raw", 1);
     imgR_sub.subscribe(nh, "/camera_array/right/image_raw", 1);
     gnss_sub.subscribe(nh, "/vectorVS330/fix", 1);
-    sync.reset(new Sync(MySyncPolicy(10), imgL_sub, imgR_sub, gnss_sub));
-    sync->registerCallback(boost::bind(&CalibNode::imageCallback, this, _1, _2, _3));
+    att_sub.subscribe(nh, "/xsens/orientation", 1);
+    sync.reset(new Sync(MySyncPolicy(10), imgL_sub, imgR_sub, gnss_sub, att_sub));
+    sync->registerCallback(boost::bind(&CalibNode::imageCallback, this, _1, _2, _3, _4));
 }
 
 
 void CalibNode::imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
                               const sensor_msgs::ImageConstPtr &imgR_msg,
-                              const calibration::gnssGGA::ConstPtr &gnss_msg) {
+                              const calibration::gnssGGA::ConstPtr &gnss_msg,
+                              const calibration::orientation::ConstPtr &att_msg) {
 
 
     double gnss_t = double(gnss_msg->header.stamp.sec) + double(gnss_msg->header.stamp.nsec) * 1e-9;
     double imgL_t = double(imgL_msg->header.stamp.sec) + double(imgL_msg->header.stamp.nsec) * 1e-9;
 
-    if ( imgL_t - camLeft.time < 1) {
+    double dt = imgL_t - camLeft.time;
+
+    if ( dt < 1) {
         return;
     }
-
-    ROS_INFO("%f", imgL_t);
+    //ROS_INFO("%f", imgL_t);
 
     vector<DMatch> newMatches, epochMatches;
     Camera newLeft(imgL_t);
     Camera newRight(imgL_t, right);
+
+    newLeft.model.unpackPosData(gnss_msg,att_msg);
 
     newLeft.img = cv_bridge::toCvCopy(imgL_msg, image_encodings::MONO8)->image;
     newRight.img = cv_bridge::toCvCopy(imgR_msg, image_encodings::MONO8)->image;
@@ -110,60 +126,73 @@ void CalibNode::imageCallback(const sensor_msgs::ImageConstPtr &imgL_msg,
     int secondMatch = 0;
     int noOf3pMatch = 0;
 
-    _feat.extractFeatures(newLeft, newRight, "SIFT");
+    _feat.extractFeatures(newLeft, newRight, descriptor);
 
     _feat.matchFeatures(newLeft, newRight, newMatches,
-                                    firstMatch, "FLANN");
-
-    //_feat.showMatches(newLeft, newRight, newMatches);
+                        firstMatch, matcher);
 
 
     if (noOfEpochs == 0) {
         ROS_INFO("first");
 
-    }
-    else {
-        _feat.matchFeatures(newLeft, camLeft, epochMatches,
-                            secondMatch, "FLANN", true);
+        currMatches = newMatches;
+        camLeft = newLeft;
+        camRight = newRight;
 
-        //bool enoughMatches = _feat.epochMatching(camLeft, newLeft, epochMatches,
-        //                                         secondMatch, "FLANN");
+        ROS_INFO("Timedifference %f", dt);
+        ROS_INFO("First matches: \t\t%i", firstMatch);
 
-
-
-        _feat.find3pmatch(newLeft, camLeft, camRight,
-                          epochMatches, currMatches, noOf3pMatch);
-
-        //_feat.showMatches(newLeft, camLeft, epochMatches);
-        //_feat.showMatches(camLeft, camRight, currMatches);
-
-        _feat.draw3pMatches(newLeft, camLeft, camRight);
+        noOfEpochs++;
 
 
-        //if (enoughMatches) {
-            //_feat.showMatches(camLeft, newLeft, epochMatches, true);
-
-            //Mat F = CameraModel::calcFundamental(cameraLeft, cameraRight);
-            //Mat T = CameraModel::triTensor(cameraLeft.P, cameraLeft.P,
-            //                               cameraLeftAhead.P, 1 ,2 , 1);
-
-        //}
-
+        return;
     }
 
-    noOfEpochs++;
+
+    _feat.matchFeatures(newLeft, camLeft, epochMatches,
+                        secondMatch, matcher, true);
+
+    _feat.find3pmatch(newLeft, camLeft, camRight,
+                      epochMatches, currMatches, noOf3pMatch);
+
+    //_feat.draw3pMatches(newLeft, camLeft, camRight);
+
+    if(noOf3pMatch < 10)
+    {
+        ROS_INFO("Timedifference %f", dt);
+        ROS_INFO("First matches: \t\t%i", firstMatch);
+        ROS_INFO("Second matches: \t%i", secondMatch);
+        ROS_INFO("3 point matches: \t%i", noOf3pMatch);
+        ROS_INFO("Not enough matches. SKIPPED");
+
+        currMatches = newMatches;
+        camLeft = newLeft;
+        camRight = newRight;
+
+        return;
+    }
+
+    Eigen::Vector3f dgps = newLeft.model.GNSSpos - camLeft.model.GNSSpos;
+
+    ROS_INFO("Difference in position: [%f, %f, %f]", dgps[0], dgps[1], dgps[2]);
+
     totalMatches += noOf3pMatch;
     averageMatches = totalMatches / noOfEpochs;
 
-    ROS_INFO("Timedifference %f", newLeft.time - camLeft.time);
+    ROS_INFO("Timedifference %f", dt);
     ROS_INFO("First matches: \t\t%i", firstMatch);
     ROS_INFO("Second matches: \t%i", secondMatch);
     ROS_INFO("3 point matches: \t%i", noOf3pMatch);
     ROS_INFO("Average matches: \t%i \n", averageMatches);
 
+
     currMatches = newMatches;
     camLeft = newLeft;
     camRight = newRight;
+
+    //filter.process () ;
+
+    noOfEpochs++;
 }
 
 

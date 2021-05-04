@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "calibration: 2 messages, 0 services")
+message(STATUS "calibration: 3 messages, 0 services")
 
 set(MSG_I_FLAGS "-Icalibration:/home/martin/Code/Master/autoCalib_ws/src/calibration/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
@@ -27,6 +27,11 @@ add_custom_target(_calibration_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "calibration" "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg" "std_msgs/Header:calibration/gnssGGA_status"
 )
 
+get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" NAME_WE)
+add_custom_target(_calibration_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "calibration" "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" "std_msgs/Header"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -43,6 +48,12 @@ _generate_msg_cpp(calibration
   "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/calibration
+)
+_generate_msg_cpp(calibration
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/calibration
 )
 
@@ -63,6 +74,8 @@ add_dependencies(calibration_generate_messages calibration_generate_messages_cpp
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_cpp _calibration_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg" NAME_WE)
+add_dependencies(calibration_generate_messages_cpp _calibration_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_cpp _calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,6 +99,12 @@ _generate_msg_eus(calibration
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/calibration
 )
+_generate_msg_eus(calibration
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/calibration
+)
 
 ### Generating Services
 
@@ -104,6 +123,8 @@ add_dependencies(calibration_generate_messages calibration_generate_messages_eus
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_eus _calibration_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg" NAME_WE)
+add_dependencies(calibration_generate_messages_eus _calibration_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_eus _calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -127,6 +148,12 @@ _generate_msg_lisp(calibration
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/calibration
 )
+_generate_msg_lisp(calibration
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/calibration
+)
 
 ### Generating Services
 
@@ -145,6 +172,8 @@ add_dependencies(calibration_generate_messages calibration_generate_messages_lis
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_lisp _calibration_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg" NAME_WE)
+add_dependencies(calibration_generate_messages_lisp _calibration_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_lisp _calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -168,6 +197,12 @@ _generate_msg_nodejs(calibration
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/calibration
 )
+_generate_msg_nodejs(calibration
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/calibration
+)
 
 ### Generating Services
 
@@ -186,6 +221,8 @@ add_dependencies(calibration_generate_messages calibration_generate_messages_nod
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_nodejs _calibration_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg" NAME_WE)
+add_dependencies(calibration_generate_messages_nodejs _calibration_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_nodejs _calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -209,6 +246,12 @@ _generate_msg_py(calibration
   "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/calibration
 )
+_generate_msg_py(calibration
+  "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/calibration
+)
 
 ### Generating Services
 
@@ -227,6 +270,8 @@ add_dependencies(calibration_generate_messages calibration_generate_messages_py)
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_py _calibration_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg" NAME_WE)
+add_dependencies(calibration_generate_messages_py _calibration_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg" NAME_WE)
 add_dependencies(calibration_generate_messages_py _calibration_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

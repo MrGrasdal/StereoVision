@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg"
+messages_str = "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg;/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
 services_str = ""
 pkg_name = "calibration"
 dependencies_str = "std_msgs"

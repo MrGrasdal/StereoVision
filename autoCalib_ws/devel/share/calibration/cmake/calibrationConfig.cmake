@@ -74,7 +74,7 @@ if("TRUE" STREQUAL "TRUE")
 else()
   set(calibration_SOURCE_PREFIX "")
   set(calibration_DEVEL_PREFIX "")
-  set(calibration_INSTALL_PREFIX /home/martin/Code/Master/autoCalib_ws/install)
+  set(calibration_INSTALL_PREFIX /usr/local)
   set(calibration_PREFIX ${calibration_INSTALL_PREFIX})
 endif()
 

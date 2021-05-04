@@ -8,27 +8,37 @@
 #include <string.h>
 #include <iostream>
 #include <vector>
+#include "Eigen/Dense"
 
 #include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <cv_bridge/cv_bridge.h>
 
+#include <calibration/gnssGGA.h>
+#include <calibration/orientation.h>
+
 using namespace std;
 using namespace cv;
 
-class CameraModel {
+typedef Eigen::Matrix<float, 3, 4> Matrixf34;
 
+class CameraModel {
     public:
 
     double fx, fy, cx, cy;
     double d1, d2, d3;
 
-    Vec3f trans;
-    Vec3f rEuler;
+    Eigen::Vector3f trans;
+    Eigen::Vector3f rEuler;
 
-    Mat K;
-    Mat R;
-    Mat P;
+    Eigen::Vector3f GNSSpos;
+    Eigen::Vector3f IMUrot;
+
+    Eigen::Matrix3f K;
+    Eigen::Matrix3f R;
+    Matrixf34 P;
+
+
 
     CameraModel(const CameraModel &sample);
 
@@ -36,28 +46,34 @@ class CameraModel {
     CameraModel(bool right=false, double _fx=1000.0, double _fy=1000.0,
                 double _cx=600.0, double _cy=500.0);
 
-    Mat calcK_matrix();
+    Eigen::Matrix3f calcK_matrix();
 
-    Mat calcP_matrix();
+    Matrixf34 calcP_matrix();
 
-    static Mat calcFundamental(CameraModel left, CameraModel right);
+    static Eigen::Matrix3f calcFundamental(CameraModel left, CameraModel right);
 
-    static Mat triTensor(Mat Pa, Mat Pb, Mat Pc, int q, int r, int l);
+    static Eigen::Matrix3f triTensor(Matrixf34 Pa, Matrixf34 Pb, Matrixf34 Pc, int q, int r, int l);
 
     Point2d distortionModel(Point2d pt);
 
-    Point3d projectPixelTo3dRay(const Point2d &uv_rect, const Matx34d &P);
+    Point3d projectPixelTo3dRay(const Point2d &uv_rect, const Matrixf34 &P);
 
     Point2d project3dToPixel(const Point3d &xyz);
 
+    void unpackPosData(calibration::gnssGGA_<allocator<void>>::ConstPtr gnss,
+                       calibration::orientation_<allocator<void>>::ConstPtr orient);
 
 private:
 
-    Mat eulerToRotMat(Vec3f &theta);
+    Eigen::Matrix3f eulerToRotMat(Eigen::Vector3f &theta);
 
-    static Mat Skew(Vec3f v);
+    static Eigen::Matrix3f Skew(Eigen::Vector3f v);
 
 
+    void updatePosition(Eigen::Vector3f newTrans, Eigen::Vector3f newAngle);
+
+
+    double deg2Rad(double degree);
 };
 
 

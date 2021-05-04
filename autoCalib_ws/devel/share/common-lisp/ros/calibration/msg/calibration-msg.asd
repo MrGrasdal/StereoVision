@@ -9,4 +9,6 @@
     (:file "_package_gnssGGA" :depends-on ("_package"))
     (:file "gnssGGA_status" :depends-on ("_package_gnssGGA_status"))
     (:file "_package_gnssGGA_status" :depends-on ("_package"))
+    (:file "orientation" :depends-on ("_package_orientation"))
+    (:file "_package_orientation" :depends-on ("_package"))
   ))

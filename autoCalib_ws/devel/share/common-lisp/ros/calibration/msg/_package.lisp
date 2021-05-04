@@ -5,5 +5,7 @@
    "GNSSGGA"
    "<GNSSGGA_STATUS>"
    "GNSSGGA_STATUS"
+   "<ORIENTATION>"
+   "ORIENTATION"
   ))
 

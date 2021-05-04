@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "/home/martin/Code/Master/autoCalib_ws/devel/share/roseus/ros/calibration/manifest.l"
   "/home/martin/Code/Master/autoCalib_ws/devel/share/roseus/ros/calibration/msg/gnssGGA.l"
   "/home/martin/Code/Master/autoCalib_ws/devel/share/roseus/ros/calibration/msg/gnssGGA_status.l"
+  "/home/martin/Code/Master/autoCalib_ws/devel/share/roseus/ros/calibration/msg/orientation.l"
   "CMakeFiles/calibration_generate_messages_eus"
 )
 

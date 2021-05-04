@@ -3,6 +3,7 @@
 //
 
 #include "camModel.h"
+#include "Eigen/Dense"
 
 CameraModel::CameraModel(bool right, double _fx, double _fy, double _cx, double _cy) {
     fx = _fx;
@@ -13,18 +14,19 @@ CameraModel::CameraModel(bool right, double _fx, double _fy, double _cx, double 
 
     if (right == false)
     {
-        trans = Vec3f{0.0, 0.0, 0.0};
-        rEuler = Vec3f{0.0, 0.0, 0.0};
+        trans = Eigen::Vector3f{0.0, 0.0, 0.0};
+        rEuler = Eigen::Vector3f{0.0, 0.0, 0.0};
     }
     else
     {
-        trans = Vec3f{0.0, 1.5, 0.0};
-        rEuler = Vec3f{0.0, 0.0, 2.0};
+        trans = Eigen::Vector3f{0.0, 1.5, 0.0};
+        rEuler = Eigen::Vector3f{0.0, 0.0, 2.0};
     }
 
     K = calcK_matrix();
     R = eulerToRotMat(rEuler);
     P = calcP_matrix();
+
 }
 
 CameraModel::CameraModel(const CameraModel& sample) {
@@ -42,49 +44,56 @@ CameraModel::CameraModel(const CameraModel& sample) {
     P = sample.P;
 }
 
+void CameraModel::updatePosition(Eigen::Vector3f newTrans, Eigen::Vector3f newAngle) {
+    trans = newTrans;
+    rEuler = newAngle;
+    R = eulerToRotMat(rEuler);
+
+}
 
 
-Mat CameraModel::calcK_matrix()
+
+Eigen::Matrix3f CameraModel::calcK_matrix()
 {
-    Mat K_ = (Mat_<double>(3, 3) <<
-            fx, 0, cx,
-            0, fy, cy,
-            0, 0, 1);
+    Eigen::Matrix3f K_;
+    K_ <<   fx, 0,  cx,
+            0,  fy, cy,
+            0,  0,  1;
 
     return K_;
 }
 
-Mat CameraModel::calcP_matrix()
+Matrixf34 CameraModel::calcP_matrix()
 {
-    Mat P_ = K * R * (Mat_<double>(3, 4) <<
-            1, 0, 0, -trans[0],
+    Matrixf34 P_;
+    P_ <<   1, 0, 0, -trans[0],
             0, 1, 0, -trans[1],
-            0, 0, 1, -trans[2]);
+            0, 0, 1, -trans[2];
 
-    return P_;
+
+    return K * R * P_;
 }
 
 
-Mat CameraModel::triTensor(Mat Pa, Mat Pb, Mat Pc, int q, int r, int l )
+Eigen::Matrix4f triTensor(Matrixf34 Pa, Matrixf34 Pb, Matrixf34 Pc, int q, int r, int l)
 {
-    Mat Tmat = (Mat_<double>(4, 4) <<
-                                   0, 0, 0, 0,
+    Eigen::Matrix4f Tmat;
+    Tmat << 0, 0, 0, 0,
             0, 0, 0, 0,
             0, 0, 0, 0,
-            0, 0, 0, 0);
+            0, 0, 0, 0;
 
     int k = 0;
     for (int i = 0; i < 3; i++) {
         if ( i != l-1) {
-            Pa.row(i).copyTo(Tmat.row(k));
+            Tmat.row(i) = Pa.row(k);
             k++;
         }
     }
+    Tmat.row(2) = Pb.row(q);
+    Tmat.row(3) = Pb.row(r);
 
-    Pb.row(q).copyTo(Tmat.row(2));
-    Pc.row(r).copyTo(Tmat.row(3));
-
-    double T = determinant(Tmat);
+    double T = Tmat.determinant();
 
     T = pow(-1, l+1) * T;
 
@@ -95,28 +104,38 @@ Mat CameraModel::triTensor(Mat Pa, Mat Pb, Mat Pc, int q, int r, int l )
 }
 
 
-Mat CameraModel::eulerToRotMat(Vec3f &theta)
+Eigen::Matrix3f CameraModel::eulerToRotMat(Eigen::Vector3f &theta)
 {
+    double roll = deg2Rad(theta[1]);
+    double pitch = deg2Rad(theta[1]);
+    double yaw = deg2Rad(theta[2]);
+
     // Calculate rotation about x axis
-    Mat R_x = (Mat_<double>(3,3) <<
-            1, 0,                0,
-            0, cos(theta[0]), -sin(theta[0]),
-            0, sin(theta[0]), cos(theta[0]));
+    Eigen::Matrix3f R_x;
+    R_x <<  1, 0,                0,
+            0, cos(pitch), -sin(pitch),
+            0, sin(pitch), cos(pitch);
 
     // Calculate rotation about y axis
-    Mat R_y = (Mat_<double>(3,3) <<
-            cos(theta[1]),  0,  sin(theta[1]),
-            0,                 1,  0,
-            -sin(theta[1]), 0,  cos(theta[1]));
+    Eigen::Matrix3f R_y;
+    R_y <<  cos(yaw),  0,  sin(pitch),
+            0,           1,  0,
+            -sin(yaw), 0,  cos(yaw);
 
     // Calculate rotation about z axis
-    Mat R_z = (Mat_<double>(3,3) <<
-            cos(theta[2]),  -sin(theta[2]),   0,
-            sin(theta[2]),  cos(theta[2]),    0,
-            0,                 0,                   1);
+    Eigen::Matrix3f R_z;
+    R_z <<  cos(roll),  -sin(roll),   0,
+            sin(roll),  cos(roll),    0,
+            0,         0,           1;
 
     // Combined rotation matrix
     return R_z * R_x * R_y;  // Pass på rekkefølge
+}
+
+double CameraModel::deg2Rad(double degree)
+{
+    double pi = 3.14159265359;
+    return (degree * (pi / 180));
 }
 
 Point2d CameraModel::distortionModel(Point2d pt)
@@ -140,7 +159,7 @@ Point2d CameraModel::project3dToPixel(const cv::Point3d& xyz)
 
 
 
-cv::Point3d CameraModel::projectPixelTo3dRay(const cv::Point2d& uv_rect, const cv::Matx34d& P)
+cv::Point3d CameraModel::projectPixelTo3dRay(const cv::Point2d& uv_rect, const Matrixf34& P)
 {
 
     const double& fx = P(0,0);
@@ -159,17 +178,32 @@ cv::Point3d CameraModel::projectPixelTo3dRay(const cv::Point2d& uv_rect, const c
 
 
 
-Mat CameraModel::calcFundamental(CameraModel left, CameraModel right) {
+Eigen::Matrix3f CameraModel::calcFundamental(CameraModel left, CameraModel right) {
 
-    Mat F = left.K.inv().t() * left.R * Skew(right.trans) * right.R.t() * right.K.inv();
+    Eigen::Matrix3f F;
+    F = left.K.inverse().transpose() * left.R * Skew(right.trans)
+            * right.R.transpose() * right.K.inverse();
     return F;
 }
 
-Mat CameraModel::Skew(Vec3f v)
+Eigen::Matrix3f CameraModel::Skew(Eigen::Vector3f v)
 {
-    Mat skew = (Mat_<double>(3,3) <<
-            0,      -v[2],  v[1],
+    Eigen::Matrix3f skew;
+    skew << 0,      -v[2],  v[1],
             v[2],   0,      -v[0],
-            -v[1],  v[0],   0);
+            -v[1],  v[0],   0;
     return skew;
+}
+
+void CameraModel::unpackPosData(calibration::gnssGGA::ConstPtr gnss,
+                                calibration::orientation::ConstPtr orient)
+{
+    GNSSpos[0] = gnss->latitude;
+    GNSSpos[1] = gnss->longitude;
+    GNSSpos[2] = gnss->altitude;
+
+    IMUrot[0] = orient->roll;
+    IMUrot[1] = orient->pitch;
+    IMUrot[2] = orient->yaw;
+
 }

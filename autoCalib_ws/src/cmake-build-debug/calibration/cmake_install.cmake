@@ -46,6 +46,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/calibration/msg" TYPE FILE FILES
     "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA_status.msg"
     "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg"
+    "/home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg"
     )
 endif()
 

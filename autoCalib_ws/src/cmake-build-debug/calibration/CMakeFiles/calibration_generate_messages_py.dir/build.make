@@ -74,6 +74,7 @@ include calibration/CMakeFiles/calibration_generate_messages_py.dir/progress.mak
 
 calibration/CMakeFiles/calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_gnssGGA_status.py
 calibration/CMakeFiles/calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_gnssGGA.py
+calibration/CMakeFiles/calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_orientation.py
 calibration/CMakeFiles/calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/__init__.py
 
 
@@ -89,15 +90,23 @@ calibration/CMakeFiles/calibration_generate_messages_py: /home/martin/Code/Maste
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG calibration/gnssGGA"
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/martin/Code/Master/autoCalib_ws/src/calibration/msg/gnssGGA.msg -Icalibration:/home/martin/Code/Master/autoCalib_ws/src/calibration/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p calibration -o /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg
 
+/home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_orientation.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_orientation.py: ../calibration/msg/orientation.msg
+/home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_orientation.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG calibration/orientation"
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/martin/Code/Master/autoCalib_ws/src/calibration/msg/orientation.msg -Icalibration:/home/martin/Code/Master/autoCalib_ws/src/calibration/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p calibration -o /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg
+
 /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/__init__.py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_gnssGGA_status.py
 /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/__init__.py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_gnssGGA.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for calibration"
+/home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/__init__.py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_orientation.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for calibration"
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug/calibration && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg --initpy
 
 calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/__init__.py
 calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_gnssGGA.py
 calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_gnssGGA_status.py
+calibration_generate_messages_py: /home/martin/Code/Master/autoCalib_ws/devel/lib/python3/dist-packages/calibration/msg/_orientation.py
 calibration_generate_messages_py: calibration/CMakeFiles/calibration_generate_messages_py
 calibration_generate_messages_py: calibration/CMakeFiles/calibration_generate_messages_py.dir/build.make
 

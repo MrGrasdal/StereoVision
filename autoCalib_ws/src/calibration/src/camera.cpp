@@ -39,3 +39,4 @@ void Camera::initCamera(bool rght)
     time = 0.0;
 }
 
+

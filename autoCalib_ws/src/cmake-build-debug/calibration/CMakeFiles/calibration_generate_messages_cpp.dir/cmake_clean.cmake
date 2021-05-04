@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA.h"
   "/home/martin/Code/Master/autoCalib_ws/devel/include/calibration/gnssGGA_status.h"
+  "/home/martin/Code/Master/autoCalib_ws/devel/include/calibration/orientation.h"
   "CMakeFiles/calibration_generate_messages_cpp"
 )
 
