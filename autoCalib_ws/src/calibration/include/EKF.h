@@ -15,6 +15,19 @@ using Eigen::VectorXd;
 
 class EKF {
 public:
+    enum state
+    {   epochTx, epochTy, epochTz, epochR, epochP, epochY,
+        extR, extP, extY,
+        fxL, fyL, cxL, cyL, d1L, d2L,
+        fxR, fyR, cxR, cyR, d1R, d2R,
+        last_state
+    };
+
+    enum dx
+    {
+        Px_l, Py_l, Px_r, Py_r, Px_nxt, Py_nxt, last_xd
+    };
+
 
     // state vector
     Eigen::VectorXd z_;
@@ -33,6 +46,23 @@ public:
 
     // measurement covariance matrix
     Eigen::MatrixXd R_;
+
+
+    Eigen::Vector3d baseline;
+
+    Eigen::MatrixXd Pleft;
+    Eigen::MatrixXd Pright;
+    Eigen::MatrixXd PleftNxt;
+
+    Eigen::MatrixXd Fundamental;
+
+    Eigen::MatrixXd dPleft;
+    Eigen::MatrixXd dPright;
+    Eigen::MatrixXd dPleftNxt;
+
+
+
+
 
     /**
      * Constructor
@@ -86,6 +116,7 @@ private:
     // previous timestamp
     long long previous_timestamp_;
 
+
     Eigen::MatrixXd R_laser_;
     Eigen::MatrixXd R_radar_;
     Eigen::MatrixXd H_laser_;
@@ -94,7 +125,38 @@ private:
     float noise_ay;
 
 
+    MatrixXd CalculateA(Camera leftNxt, Camera left, Camera right);
+    MatrixXd CalculateB(Camera left, Camera right, Camera leftNxt);
 
+    MatrixXd derivatePa(int param);
+    MatrixXd derivatePb(int param);
+    MatrixXd derivatePc(int param);
+
+    double triTensor(Matrixf34 Pa, Matrixf34 Pb, Matrixf34 Pc, int l, int q, int r);
+    double dT_lqr(Camera leftNxt, Camera left, Camera right, int l, int q, int r);
+
+    Eigen::Matrix3d Skew(Eigen::Vector3f v);
+
+    MatrixXd GetRotMatrix(double roll, double pitch, double yaw);
+
+    MatrixXd derivateF(int param);
+
+    void UpdateProjAndFundamental();
+    void UpdateDerivProj(int param);
+
+
+    double derivateGqr(Eigen::Vector3d leftKpt, Eigen::Vector3d rightKpt, Eigen::Vector3d nextKpt, int q, int r, int param);
+    double derivateHe(Eigen::Vector3d leftKpt, Eigen::Vector3d rightKpt, int param);
+
+
+    MatrixXd CalculateFpred(Camera left, Camera right, Camera leftNxt);
+    MatrixXd CalculateBpred(Camera left, Camera right, Camera leftNxt);
+
+    MatrixXd X_hat(Camera left, Camera right, Camera leftNxt);
+
+    double CalculateGqr(Eigen::Vector3d leftKpt, Eigen::Vector3d rightKpt, Eigen::Vector3d nextKpt, int q, int r);
+
+    MatrixXd Constraint(Camera left, Camera right, Camera leftNxt);
 };
 
 

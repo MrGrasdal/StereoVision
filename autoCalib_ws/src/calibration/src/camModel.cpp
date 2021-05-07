@@ -75,35 +75,6 @@ Matrixf34 CameraModel::calcP_matrix()
 }
 
 
-Eigen::Matrix4f triTensor(Matrixf34 Pa, Matrixf34 Pb, Matrixf34 Pc, int q, int r, int l)
-{
-    Eigen::Matrix4f Tmat;
-    Tmat << 0, 0, 0, 0,
-            0, 0, 0, 0,
-            0, 0, 0, 0,
-            0, 0, 0, 0;
-
-    int k = 0;
-    for (int i = 0; i < 3; i++) {
-        if ( i != l-1) {
-            Tmat.row(i) = Pa.row(k);
-            k++;
-        }
-    }
-    Tmat.row(2) = Pb.row(q);
-    Tmat.row(3) = Pb.row(r);
-
-    double T = Tmat.determinant();
-
-    T = pow(-1, l+1) * T;
-
-
-    std::cout << T << std::endl;
-
-    return Tmat;
-}
-
-
 Eigen::Matrix3f CameraModel::eulerToRotMat(Eigen::Vector3f &theta)
 {
     double roll = deg2Rad(theta[1]);
@@ -144,7 +115,7 @@ Point2d CameraModel::distortionModel(Point2d pt)
 
     return pt * ( 1 + d1 * r2 + d2 * pow(r2, 2) + d3 * pow(r2,3));
 }
-
+//I am a pussy boi
 Point2d CameraModel::project3dToPixel(const cv::Point3d& xyz)
 {
 

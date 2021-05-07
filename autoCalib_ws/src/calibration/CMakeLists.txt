@@ -262,7 +262,7 @@ link_directories(${OpenCV_LIB_DIR})
 # catkin_add_nosetests(test)
 
 
-add_executable(main_calib src/main_calib.cpp src/feat_utils.cpp src/camModel.cpp src/camera.cpp include/camera.h src/EKF.cpp include/EKF.h)
+add_executable(main_calib src/main_calib.cpp src/feat_utils.cpp src/camModel.cpp src/camera.cpp include/camera.h src/EKF.cpp include/EKF.h src/EKF_utils.cpp include/EKF_utils.h)
 target_link_libraries(main_calib ${catkin_LIBRARIES} ${OpenCV_LIBS} gtsam)
 add_dependencies(main_calib calibration_generate_messages_cpp)
 

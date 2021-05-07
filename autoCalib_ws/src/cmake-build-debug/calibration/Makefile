@@ -411,6 +411,33 @@ calibration_generate_messages_lisp/fast:
 	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/calibration_generate_messages_lisp.dir/build.make calibration/CMakeFiles/calibration_generate_messages_lisp.dir/build
 .PHONY : calibration_generate_messages_lisp/fast
 
+EKF_tils.o: EKF_tils.cpp.o
+
+.PHONY : EKF_tils.o
+
+# target to build an object file
+EKF_tils.cpp.o:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/EKF_tils.cpp.o
+.PHONY : EKF_tils.cpp.o
+
+EKF_tils.i: EKF_tils.cpp.i
+
+.PHONY : EKF_tils.i
+
+# target to preprocess a source file
+EKF_tils.cpp.i:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/EKF_tils.cpp.i
+.PHONY : EKF_tils.cpp.i
+
+EKF_tils.s: EKF_tils.cpp.s
+
+.PHONY : EKF_tils.s
+
+# target to generate assembly for a file
+EKF_tils.cpp.s:
+	cd /home/martin/Code/Master/autoCalib_ws/src/cmake-build-debug && $(MAKE) $(MAKESILENT) -f calibration/CMakeFiles/main_calib.dir/build.make calibration/CMakeFiles/main_calib.dir/EKF_tils.cpp.s
+.PHONY : EKF_tils.cpp.s
+
 src/EKF.o: src/EKF.cpp.o
 
 .PHONY : src/EKF.o
@@ -574,6 +601,9 @@ help:
 	@echo "... calibration_gennodejs"
 	@echo "... calibration_genpy"
 	@echo "... main_calib"
+	@echo "... EKF_tils.o"
+	@echo "... EKF_tils.i"
+	@echo "... EKF_tils.s"
 	@echo "... src/EKF.o"
 	@echo "... src/EKF.i"
 	@echo "... src/EKF.s"
